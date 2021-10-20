@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Ваш лучший гид по путешествиям">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Rouge+Script">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap">
+    <link rel="stylesheet" href="{{ site.baseurl }}/styles/default.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/styles/{{ page.style }}">
+    <title>{{ page.title }}</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+       <div class="head">
+         <div class="fsocial">
+            <a href="tel:+74950181680" target="_blank" class="fa fa-phone"></a>
+            <a href="https://wa.me/79167430531" target="_blank" class="fa fa-whatsapp"></a>
+          </div>
+          <a href="{{ site.baseurl }}/index"><img src="{{ site.baseurl }}/img/gallery/logoround.png" class="logo"></a>
+          <div class="fsocial">
+              <a href="https://www.instagram.com/compass.tc/" target="_blank" class="fa fa-instagram"></a>
+              <a href="https://www.facebook.com/compass.travel.concierge" target="_blank" class="fa fa-facebook"></a>
+          </div>
+        </div>
+        <div class="navbar">
+        <nav class="mainNav" id="myMainnav">
+            <a href="{{ site.baseurl }}/index">Compass.Home</a>
+            <a href="{{ site.baseurl }}/compasstravel">Compass.Travel</a>
+            <a href="{{ site.baseurl }}/compassconcierge">Compass.Concierge</a>
+            <a href="{{ site.baseurl }}/comingsoon">Compass.News</a>
+            <a href="{{ site.baseurl }}/comingsoon">Compass.MICE</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+              <i class="fa  fa-compass" aria-hidden="true"></i></a>
+        </nav>
+      </div>
+        <script>
+        function myFunction() {
+          var x = document.getElementById("myMainnav");
+          if (x.className === "mainNav") {
+            x.className += " responsive";
+          } else {
+            x.className = "mainNav";
+            }
+            }
+          </script>
+      </header>
+      <main>
+        {{ content }}
+      </main>
+
+    <footer>
+        <form action="/action_page.php">
+        <div class="containerform">
+          <span>Оставайтесь в курсе последних новостей</span>
+        </div>
+
+        <div class="containerform" style="background-color:white">
+          <input type="text" placeholder="Name" name="name" required>
+          <input type="text" placeholder="Email address" name="mail" required>
+          <label>
+            <input type="checkbox" checked="checked" name="subscribe"> Согласен с обработкой данных
+          </label>
+        </div>
+        <div class="containerformsubscribe">
+          <input type="submit" value="Подписаться">
+        </div>
+      </form>
+
+      <div class="footer">
+        <span>&copy;</span> 2021 Compass.Travel
+        <address>141551, Zhilinskaya str. 27-1, Zelenograd, Moscow</address>
+        <tel>p: +7 (495) 018-16-80</tel>
+        <email>e: info@compass.travel</email>
+     </div>
+
+    </footer>
+      </div>
+  </body>
+</html>
