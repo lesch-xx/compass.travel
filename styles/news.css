@@ -1,0 +1,154 @@
+.column {
+  width: 30%;
+  padding: 10px 10px;
+}
+.column img {
+  width: 100%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: black;
+}
+
+.modal.show {
+  display: flex;
+}
+
+.modal .content {
+  flex-grow: auto;
+  display: flex;
+  align-items: center;
+}
+
+.modal .content .slide {
+  display: none;
+  margin: 20px 0;
+  width: 100%;
+  height: 100%; /* TODO: fix height */
+  max-width: 750px;
+  max-height: 750px;
+}
+
+.modal .content .slide.show {
+  display: block;
+}
+
+.closeButton {
+  color: white;
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.closeButton:hover,
+.closeButton:focus {
+  color: #999;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.cursor {
+  cursor: pointer;
+}
+
+.prevButton,
+.nextButton {
+  cursor: pointer;
+  color: white;
+  padding: 100% 10px;
+  font-weight: bold;
+  font-size: 30px;
+  user-select: none;
+  box-sizing: content-box;
+  flex-grow: 1;
+}
+
+.prevButton {
+  text-align: right;
+}
+
+.prevButton:hover,
+.nextButton:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #999;
+}
+
+.column img {
+  margin-bottom: -4px;
+}
+
+.column img.hover-shadow {
+  transition: 0.3s;
+}
+
+.hover-shadow:hover {
+  box-shadow: 0 10px 14px 0 rgba(0, 0, 0, 0.5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    flex: 100%;
+    max-width: 100%;
+  }
+}
+
+.column {
+  position: relative;
+
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #F9E0E6;
+}
+
+.column:hover .overlay {
+  opacity: 1;
+}
+
+.text {
+  color: black;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.bottom-left {
+  position: absolute;
+  bottom: 8px;
+  left: 20px;
+  font-weight: bold;
+  background-color: white;
