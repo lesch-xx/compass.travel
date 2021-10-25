@@ -1,14 +1,3 @@
-p.description.services {
-  font-family: 'Playfair Display', serif;
-  text-align: justify;
-  text-indent: 20px;
-}
-
-span.name {
-  font-family: 'Playfair Display', serif;
-  text-decoration: underline;
-  font-weight: bold;
-}
 
 .column {
   width: 30%;
