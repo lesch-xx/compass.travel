@@ -393,3 +393,26 @@ input[type=submit]:hover {
     background: rgba(1, 1, 1, 0.3);
     z-index:888;
   }
+
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: #FFFEFE;
+    font-size: 10px;
+    font-weight: 300;
+    text-align: center;
+    flex-wrap: wrap;
+    z-index: 999;
+  }
+
+  .footer address {
+    text-decoration: none;
+    font-style: normal;
+  }
+
+  .footer address a {
+    color: #FFFEFE;
+    cursor: pointer;
+  }
