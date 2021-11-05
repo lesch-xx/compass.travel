@@ -124,7 +124,8 @@ section {
 }
 
 .home .content a {
-  background: rgba(252, 237, 245, 0.47);
+  background: rgb(1, 1, 1);
+  opacity: 0.5;
   padding: 15px 25px;
   color: #FFFFFE;
   font-size: 20px;
@@ -134,7 +135,7 @@ section {
 }
 
 .home .media-icons {
-  z-index:888;
+  z-index: 888;
   position: absolute;
   right: 30px;
   display: flex;
@@ -180,8 +181,8 @@ section {
 }
 
 .contact-form.active .form-items {
-  background: rgba(252, 237, 245, 0.47);
-  opacity: 0.8;
+  background: rgb(1, 1, 1);
+  opacity: 0.75;
   width: 600px;
   max-width: 600px;
   margin: 20px;
@@ -208,20 +209,23 @@ input[type=text], select, textarea {
   margin-top: 6px;
   margin-bottom: 16px;
   resize: vertical;
+  font-size: 18px;
 }
 
 input[type=submit] {
-  background-color: rgba(237, 21, 201, 0.2);
-  color: white;
-  font-weight: bolder;
-  padding: 12px 20px;
-  border: none;
-  border-radius: 4px;
+  background: rgb(1, 1, 1);
+  opacity: 0.5;
+  padding: 7px 7px;
+  color: #FFFFFE;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 2px;
   cursor: pointer;
 }
 
 input[type=submit]:hover {
-  background-color: rgba(252, 237, 245, 0.47);
+  background-color: rgba(222, 222, 231, 1);
+  color: black;
 }
 
 .home video {
@@ -345,8 +349,8 @@ input[type=submit]:hover {
   }
 
   header .navigation.active .navigation-items {
-    background: rgba(252, 237, 245, 0.47);
-    opacity: 0.8;
+    background: rgb(1, 1, 1);
+    opacity: 0.75;
     width: 600px;
     max-width: 600px;
     margin: 20px;
@@ -390,7 +394,8 @@ input[type=submit]:hover {
     height: 100vh;
     top: 0;
     left: 0;
-    background: rgba(1, 1, 1, 0.3);
+    background: rgb(1, 1, 1);
+    opacity: 0.75;
     z-index:888;
   }
 
