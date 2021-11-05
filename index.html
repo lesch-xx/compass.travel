@@ -41,17 +41,17 @@
        <a href="">Подробнее</a>
      </div>
      <div class="content">
-       <h1>Куда сейчас <br><span>можно улететь</span></h1>
+       <h1>Куда сегодня <br><span>можно полететь</span></h1>
        <p></p>
        <a href="">Подробнее</a>
      </div>
      <div class="content">
-       <h1>Бронируйте <br><span>полёт с нами</span></h1>
+       <h1>Бронируйте <br><span>полёт<br>с нами</span></h1>
        <p></p>
        <a href="">Подробнее</a>
      </div>
      <div class="content">
-       <h1>Лучшие <br><span>яхты для Вас</span></h1>
+       <h1>Организация<br><span>отдыха на яхте</span></h1>
        <p></p>
        <a href="">Подробнее</a>
      </div>
@@ -61,7 +61,7 @@
        <a href="">Подробнее</a>
      </div>
      <div class="content">
-       <h1> <br><span>MICE</span></h1>
+       <h1>MICE<br><span>Деловой<br>туризм</span></h1>
        <p></p>
        <a href="">Подробнее</a>
      </div>
@@ -138,7 +138,7 @@
       const slides = document.querySelectorAll(".video-slide");
       const contents = document.querySelectorAll(".content");
 
-      var sliderNav = function(manual){
+      var sliderNav = function(index){
         btns.forEach((btn) => {
           btn.classList.remove("active");
         });
@@ -151,16 +151,31 @@
           content.classList.remove("active");
         });
 
-        btns[manual].classList.add("active");
-        slides[manual].classList.add("active");
-        contents[manual].classList.add("active");
+        btns[index].classList.add("active");
+        slides[index].classList.add("active");
+        contents[index].classList.add("active");
       }
+
+      //Slides autoswitch
+      let sliderIndex=0;
+
+      const intervalId=window.setInterval(()=>{
+        sliderNav(sliderIndex);
+        sliderIndex=sliderIndex+1;
+
+        if (sliderIndex===slides.length){
+          sliderIndex=0;
+        }
+
+      }, 7 * 1000);
 
       btns.forEach((btn, i) => {
         btn.addEventListener("click",() => {
+          window.clearInterval(intervalId);
           sliderNav(i);
         });
       });
+
     </script>
     <div class="footer">
       <address>
