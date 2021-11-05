@@ -138,7 +138,7 @@
       const slides = document.querySelectorAll(".video-slide");
       const contents = document.querySelectorAll(".content");
 
-      var sliderNav = function(manual){
+      var sliderNav = function(index){
         btns.forEach((btn) => {
           btn.classList.remove("active");
         });
@@ -151,16 +151,32 @@
           content.classList.remove("active");
         });
 
-        btns[manual].classList.add("active");
-        slides[manual].classList.add("active");
-        contents[manual].classList.add("active");
+        btns[index].classList.add("active");
+        slides[index].classList.add("active");
+        contents[index].classList.add("active");
       }
+
+      //Slides autoswitch
+      let sliderIndex=0;
+
+      const intervalId=window.setInterval(()=>{
+        sliderNav(sliderIndex);
+        sliderIndex=sliderIndex+1;
+
+        if (sliderIndex===slides.length){
+          sliderIndex=0;
+        }
+
+      }, 7 * 1000);
+      //Slides autoswitch end
 
       btns.forEach((btn, i) => {
         btn.addEventListener("click",() => {
+          window.clearInterval(intervalId); //cancel autoswitch
           sliderNav(i);
         });
       });
+
     </script>
     <div class="footer">
       <address>

@@ -172,6 +172,7 @@ section {
   top: 0;
   left: 0;
   background: rgba(1, 1, 1, 0.3);
+  opacity: 1;
 }
 
 .contact-form.active .form-items {
@@ -210,6 +211,7 @@ input[type=text], select, textarea {
   margin-bottom: 16px;
   resize: vertical;
   font-size: 18px;
+  background-color: rgba(255, 255, 255, 1);
 }
 
 input[type=submit] {
@@ -394,9 +396,9 @@ input[type=submit]:hover {
     height: 100vh;
     top: 0;
     left: 0;
-    background: rgb(1, 1, 1);
-    opacity: 0.75;
-    z-index:888;
+    background: rgba(1, 1, 1, 0.3);
+    opacity: 1;
+    z-index: 1000;
   }
 
   .footer {
