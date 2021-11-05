@@ -168,10 +168,13 @@
         }
 
       }, 7 * 1000);
+      
+      //Slides autoswitch end
 
       btns.forEach((btn, i) => {
         btn.addEventListener("click",() => {
-          window.clearInterval(intervalId);
+          window.clearInterval(intervalId); //cancel autoswitch
+
           sliderNav(i);
         });
       });
