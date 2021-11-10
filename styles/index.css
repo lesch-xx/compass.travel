@@ -8,14 +8,21 @@
   font-weight: bold;
   src: url("fonts/MYRIADPRO-BOLD.woff");
 }
+@import url('https://fonts.googleapis.com/css2?family=Oxygen&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Uchen&display=swap');
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "MyriadPro", sans-serif;
+  font-family: "Oxygen", sans-serif;
 }
-
+body {
+  background-image: url("/img/homepage.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 header {
   z-index: 999;
   position: absolute;
@@ -25,17 +32,17 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 15px 100px;
+  padding: 15px 30px;
   transition: 0.5s ease;
 }
 
 header .brand {
   color: #FFFEFE;
-  font-size: 30px;
+  font-size: 25px;
   text-transform: uppercase;
   text-decoration: none;
-  font-weight: bold;
-  letter-spacing: -2px;
+  letter-spacing: 2px;
+  font-family: "Uchen", serif;
 }
 
 header .brand img {
@@ -44,14 +51,18 @@ header .brand img {
 
 header .navigation {
   position: relative;
+  margin-left: 450px;
 }
 
 header .navigation .navigation-items a {
   position: relative;
   color: #FFFEFE;
-  font-size: 24px;
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  text-transform: uppercase;
   text-decoration: none;
-  margin-left: 30px;
+  margin-left: 20px;
   transition: 0.3s ease;
 }
 
@@ -74,6 +85,30 @@ section {
   padding: 100px 200px;
 }
 
+header button {
+  display: inline-block;
+  border: 1px;
+  border-radius: 12px;
+  padding: 5px 5px;
+  background-color: transparent;
+  opacity: 1;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+header button:hover {
+  background-color: white;
+  color: black;
+  text-decoration: none;
+}
+
 .home {
   position: relative;
   width: 100%;
@@ -81,65 +116,24 @@ section {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  background: #FBEEF5;
 }
 
-.home:before {
-  z-index: 777;
-  content: "";
-  position: absolute;
-  background: rgba(3, 96, 251, 0.2);
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-}
-
-.home .content {
+.home .content img {
+  display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: auto;
+  position: relative;
   z-index: 888;
-  color: #FFFEFE;
   width: 60%;
-  margin-top: 50px;
-  display: none;
-}
-
-.home .content.active {
-  display: block;
-}
-
-.home .content h1 {
-  font-size: 60px;
-  text-transform: uppercase;
-  letter-spacing: 3px;
-  line-height: 75px;
-  margin-bottom: 20px;
-}
-.home .content h1 span {
-  font-size: 80px;
-  font-weight: bold;
-}
-
-.home .content p {
-  margin-bottom: 55px;
-}
-
-.home .content a {
-  background: rgb(1, 1, 1);
-  opacity: 0.5;
-  padding: 15px 25px;
-  color: #FFFFFE;
-  font-size: 20px;
-  font-weight: 400;
-  text-decoration:  none;
-  border-radius: 2px;
 }
 
 .home .media-icons {
-  z-index: 888;
-  position: absolute;
-  right: 30px;
   display: flex;
   flex-direction: column;
+  position: absolute;
+  right: 30px;
+  z-index: 888;
   transition: 0.5s ease;
 }
 
@@ -230,59 +224,6 @@ input[type=submit]:hover {
   color: black;
 }
 
-.home video {
-  z-index: 000;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.slider-navigation {
-  z-index: 888;
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: translateY(80px);
-  margin-bottom: 12px;
-}
-
-.slider-navigation .nav-btn {
-  width: 12px;
-  height: 12px;
-  background: white;
-  border-radius: 50%;
-  cursor: pointer;
-  box-shadow: 0 0 2px rgba(255, 255,255, 0.5);
-  transition: 0.3s ease;
-}
-.slider-navigation .nav-btn.active {
-  background: rgba(252, 237, 245, 0.47);
-}
-
-.slider-navigation .nav-btn:not(:last-child) {
-  margin-right: 20px;
-}
-
-.slider-navigation .nav-btn:hover {
-  transform: scale(1.2);
-}
-
-.video-slide {
- position: absolute;
- width: 100%;
- clip-path: circle(0% at 0 50%);
-}
-
-.video-slide.active {
- clip-path: circle(150% at 0 50%);
- transition: 2s ease;
- transition-property: clip-path;
-}
-
 .footer {
   position: fixed;
   left: 0;
@@ -365,17 +306,8 @@ input[type=submit]:hover {
     text-shadow: 1px 1px #3B0B2F;
   }
 
-  .home .content h1 {
-    font-size: 40px;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    line-height: 50px;
-    margin-bottom: 20px;
-  }
-  .home .content h1 span {
-    font-size: 60px;
-    font-weight: bold;
-    letter-spacing: 0;
+  .home .content img {
+    width: 80%;
   }
 
   .menu-btn {
