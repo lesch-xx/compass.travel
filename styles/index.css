@@ -19,7 +19,8 @@
   font-family: "Oxygen", sans-serif;
 }
 body {
-  background-image: url("/img/homepage.jpg");
+  background-image: url("images/homepage.jpg");
+
   background-repeat: no-repeat;
   background-size: cover;
 }
