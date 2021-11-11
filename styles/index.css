@@ -18,12 +18,13 @@
   box-sizing: border-box;
   font-family: "Oxygen", sans-serif;
 }
+
 body {
   background-image: url("images/homepage.jpg");
-
   background-repeat: no-repeat;
   background-size: cover;
 }
+
 header {
   z-index: 999;
   position: absolute;
@@ -255,6 +256,12 @@ input[type=submit]:hover {
 @media (max-width: 1040px) {
   header {
     padding: 12px 20px;
+  }
+
+  body {
+    background-image: url("images/homepage.jpg");
+    background-position: center;
+    object-fit: fill;
   }
 
   section {
