@@ -348,7 +348,8 @@ input[type=submit]:hover {
       display: flex;
       flex-direction: row;
       position: absolute;
-      margin-top: 100px;
+      margin-top: 0;
+      margin-left: 180px;
       padding: 0
       right: 13px;
       z-index: 888;
