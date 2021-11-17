@@ -1,0 +1,51 @@
+.footer {
+  text-align: center;
+  flex-wrap: wrap;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: #FFFEFE;
+  font-weight: bold;
+  letter-spacing: 3px;
+  font-size: 10px;
+  text-transform: uppercase;
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 15px 0;
+  z-index: 999;
+}
+
+.footer address {
+  text-decoration: none;
+  font-style: normal;
+}
+
+.footer address a {
+  color: #FFFEFE;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1040px) {
+  .footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: #FFFEFE;
+    font-size: 10px;
+    font-weight: 300;
+    text-align: center;
+    flex-wrap: wrap;
+    z-index: 999;
+  }
+
+  .footer address {
+    text-decoration: none;
+    font-style: normal;
+  }
+
+  .footer address a {
+    color: #FFFEFE;
+    cursor: pointer;
+  }
+}

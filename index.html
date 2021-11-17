@@ -1,145 +1,222 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ваш лучший гид по путешествиям">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="styles/index.css">
-    <title>Compass.Travel</title>
-  </head>
-  <body>
-   <header>
-     <a href="#" class="brand">
-       Compass
-     </a>
-     <div class="menu-btn">
-       <i class="fa fa-bars" aria-hidden="true"></i>
-     </div>
-     <div class="navigation">
-       <div class="navigation-items">
-         <a href="#"><i class="fa fa-home"></i></a>
-         <a href="#">Путешествия</a>
-         <a href="#">Яхты</a>
-         <a href="#">Бизнес Авиация</a>
-         <a href="#">Консьерж</a>
-       </div>
-     </div>
-     <div class="buttons">
-       <a href="en.html"><button>EN</button></a>
-       <a href="index.html"><button>RU</button></a>
-     </div>
-   </header>
-   <section class="home">
-     <div class="content">
-       <img src="img/logo.png">
-     </div>
-     <div class="media-icons">
-       <a href="https://wa.me/79167430531" target="_blank"><i class="fa fa-whatsapp"></i></a>
-       <a href="https://www.instagram.com/compass.tc/" target="_blank"><i class="fa fa-instagram"></i></a>
-       <a href="https://www.facebook.com/compass.travel.concierge" target="_blank"><i class="fa fa-facebook-official"></i></a>
-       <a href="tel:+74950181680"><i class="fa fa-phone-square" target="_blank"></i></a>
-       <a href="#" class="contact-btn"><i class="fa fa-envelope-square"></i></a>
-     </div>
-         <div class="contact-form">
-           <div class="form-items">
-             <input type="text" id="fname" name="firstname" placeholder="Ваше имя.." required>
-             <input type="text" id="tel" name="tel" placeholder="Ваш контактный телефон.." required>
-             <input type="text" id="email" name="email" placeholder="Адрес электронной почты.." required>
-             <textarea id="subject" name="subject" placeholder="Расскажите о желаемой поездке в двух словах.." style="height:200px"></textarea>
-             <div class="form-btns">
-              <input class="form-btn-send" type="submit" value="Отправить">
-              <input class="form-btn-close" type="submit" value="Закрыть">
-             </div>
-           </div>
+---
+title: Homepage
+layout: default
+---
+
+<img src="img/logo.png">
+<div class="media-icons">
+ <a href="https://wa.me/79167430531" target="_blank"><i class="fa fa-whatsapp"></i></a>
+ <a href="https://www.instagram.com/compass.tc/" target="_blank"><i class="fa fa-instagram"></i></a>
+ <a href="https://www.facebook.com/compass.travel.concierge" target="_blank"><i class="fa fa-facebook-official"></i></a>
+ <a href="tel:+74950181680"><i class="fa fa-phone-square" target="_blank"></i></a>
+ <a href="#" class="contact-btn"><i class="fa fa-envelope-square"></i></a>
+</div>
+<div class="contact-form">
+ <div class="form-items">
+   <input type="text" id="fname" name="firstname" placeholder="Ваше имя.." required>
+   <input type="text" id="tel" name="tel" placeholder="Ваш контактный телефон.." required>
+   <input type="text" id="email" name="email" placeholder="Адрес электронной почты.." required>
+   <textarea id="subject" name="subject" placeholder="Расскажите о желаемой поездке в двух словах.." style="height:200px"></textarea>
+   <div class="form-btns">
+    <input class="form-btn-send" type="submit" value="Отправить">
+    <input class="form-btn-close" type="submit" value="Закрыть">
+   </div>
+ </div>
+</div>
+      <!--<div class="news">
+        <video class="video-slide active" src="video/palm.mp4" loop autoplay muted playsinline loop></video>
+        <video class="video-slide" src="video/airport.mp4" loop autoplay muted playsinline loop></video>
+        <video class="video-slide" src="video/flight.mp4" loop autoplay muted playsinline loop></video>
+        <video class="video-slide" src="video/yacht.mp4" loop autoplay muted playsinline loop></video>
+        <video class="video-slide" src="video/hotel.mp4" loop autoplay muted playsinline loop></video>
+        <video class="video-slide" src="video/mice.mp4" loop autoplay muted playsinline loop></video>
+        <video class="video-slide" src="video/concierge.mp4" loop autoplay muted playsinline loop></video>
+        <div class="content active">
+          <h1>Путешествуй с<br><span>Compass<br>Travel</span></h1>
+          <p></p>
+          <a href="">Подробнее</a>
+        </div>
+        <div class="content">
+          <h1>Куда сегодня <br><span>можно полететь</span></h1>
+          <p></p>
+          <a href="">Подробнее</a>
+        </div>
+        <div class="content">
+          <h1>Бронируйте <br><span>полёт<br>с нами</span></h1>
+          <p></p>
+          <a href="">Подробнее</a>
+        </div>
+        <div class="content">
+          <h1>Организация<br><span>отдыха на яхте</span></h1>
+          <p></p>
+          <a href="">Подробнее</a>
+        </div>
+        <div class="content">
+          <h1>Предложения от <br><span>лучших отелей</span></h1>
+          <p></p>
+          <a href="">Подробнее</a>
+        </div>
+        <div class="content">
+          <h1>MICE<br><span>Деловой<br>туризм</span></h1>
+          <p></p>
+          <a href="">Подробнее</a>
+        </div>
+        <div class="content">
+          <h1>Наши <br><span>консьерж услуги</span></h1>
+          <p></p>
+          <a href="">Подробнее</a>
+        </div>
+        <div class="slider-navigation">
+          <div class="nav-btn active"></div>
+          <div class="nav-btn"></div>
+          <div class="nav-btn"></div>
+          <div class="nav-btn"></div>
+          <div class="nav-btn"></div>
+          <div class="nav-btn"></div>
+          <div class="nav-btn"></div>
          </div>
-       </section>
+      </div>
+       <button><a href="#">Поcмотреть все новости</a></button>
+    </div>-->
 
-       <script type="text/javascript">
-          //Javascript of contact form
-         const contactBtn = document.querySelector(".contact-btn");
-         const contactForm = document.querySelector(".contact-form");
-         const submitBtn = document.querySelector(".form-btn-send");
-         const closeBtn = document.querySelector(".form-btn-close");
+  <script>
+    // Contact form
+    const contactBtn = document.querySelector(".contact-btn");
+    const contactForm = document.querySelector(".contact-form");
+    const submitBtn = document.querySelector(".form-btn-send");
+    const closeBtn = document.querySelector(".form-btn-close");
 
-         contactBtn.addEventListener("click", () => {
-           contactBtn.classList.toggle("active");
-           contactForm.classList.toggle("active");
-         });
+    contactBtn.addEventListener("click", () => {
+      contactBtn.classList.toggle("active");
+      contactForm.classList.toggle("active");
+    });
 
-         submitBtn.addEventListener("click", () => {
-           submitBtn.classList.toggle("active");
-           contactForm.classList.remove("active");
-         });
+    submitBtn.addEventListener("click", () => {
+      submitBtn.classList.toggle("active");
+      contactForm.classList.remove("active");
+    });
 
-         closeBtn.addEventListener("click", () => {
-           closeBtn.classList.toggle("active");
-           contactForm.classList.remove("active");
-         });
+    closeBtn.addEventListener("click", () => {
+      closeBtn.classList.toggle("active");
+      contactForm.classList.remove("active");
+    });
 
-         //Javascript of responsive navigation
-         const menuBtn = document.querySelector(".menu-btn");
-         const navigation = document.querySelector(".navigation");
+    // Responsive navigation
+    const menuBtn = document.querySelector(".menu-btn");
+    const navigation = document.querySelector(".navigation");
 
-         menuBtn.addEventListener("click", () => {
-           menuBtn.classList.toggle("active");
-           navigation.classList.toggle("active");
-         });
+    menuBtn.addEventListener("click", () => {
+      menuBtn.classList.toggle("active");
+      navigation.classList.toggle("active");
+    });
 
-        /*
-         //Javascript for video slider navigation
-         const btns = document.querySelectorAll(".nav-btn");
-         const slides = document.querySelectorAll(".video-slide");
-         const contents = document.querySelectorAll(".content");
+    // Video slider navigation
+    const btns = document.querySelectorAll(".nav-btn");
+    const slides = document.querySelectorAll(".video-slide");
+    const contents = document.querySelectorAll(".content");
+    const sliderNav = function(index) {
+      btns.forEach((btn) => {
+        btn.classList.remove("active");
+      });
 
-         var sliderNav = function(index){
-           btns.forEach((btn) => {
-             btn.classList.remove("active");
-           });
+      slides.forEach((slide) => {
+        slide.classList.remove("active");
+      });
 
-           slides.forEach((slide) => {
-             slide.classList.remove("active");
-           });
+      contents.forEach((content) => {
+        content.classList.remove("active");
+      });
 
-           contents.forEach((content) => {
-             content.classList.remove("active");
-           });
+      btns[index].classList.add("active");
+      slides[index].classList.add("active");
+      contents[index].classList.add("active");
+    }
 
-           btns[index].classList.add("active");
-           slides[index].classList.add("active");
-           contents[index].classList.add("active");
-         }
+    //Slides autoswitch
+    let sliderIndex=0;
 
-         //Slides autoswitch
-         let sliderIndex=0;
+    const intervalId = window.setInterval(
+      () => {
+        sliderNav(sliderIndex);
+        sliderIndex = sliderIndex + 1;
 
-         const intervalId=window.setInterval(()=>{
-           sliderNav(sliderIndex);
-           sliderIndex=sliderIndex+1;
+        if (sliderIndex === slides.length) {
+          sliderIndex = 0;
+        }
+      },
+      7 * 1000,
+    );
+    //Slides autoswitch end
 
-           if (sliderIndex===slides.length){
-             sliderIndex=0;
-           }
+    btns.forEach((btn, i) => {
+      btn.addEventListener('click', () => {
+        window.clearInterval(intervalId); //cancel autoswitch
 
-         }, 7 * 1000);
-
-         //Slides autoswitch end
-
-         btns.forEach((btn, i) => {
-           btn.addEventListener("click",() => {
-             window.clearInterval(intervalId); //cancel autoswitch
-
-             sliderNav(i);
-           });
-         });
-*/
-       </script>
-    <div class="footer">
-      <address>
-        141551, Zhilinskaya str. 27-1, Zelenograd, Moscow
-        p: <a href="tel:+74950181680">+7 (495) 018-16-80</a>
-        e: <a href="mailto:info@compass.travel">info@compass.travel</a>
-      </address>
+        sliderNav(i);
+      });
+    });
+  </script>
+<!--
+<div class="row">
+  <div class="column">
+    <img src="/img/news/thailand.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow cursor">
+    <div class="bottom-left">Таиланд «упростил» туристам оформление разрешения на въезд</div>
   </div>
-  </body>
-</html>
+  <div class="column">
+    <img src="/img/news/tunisia.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow cursor">
+    <div class="bottom-left">Тунис отменил ПЦР-тесты для вакцинированных туристов</div>
+  </div>
+  <div class="column">
+    <img src="/img/news/kaliningrad.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow cursor">
+    <div class="bottom-left">Калининградская область вводит ограничения на заселение постояльцев в отели</div>
+  </div>
+  <div class="column">
+    <img src="/img/news/9countries.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow cursor">
+    <div class="bottom-left">Какие из девяти открытых оперштабом стран принимают российских туристов </div>
+  </div>
+  <div class="column">
+    <img src="/img/news/expensivetickets.jpg" onclick="openModal();currentSlide(5)" class="hover-shadow cursor">
+    <div class="bottom-left">Спрос на авиабилеты в Сочи и Крым на «ноябрьские выходные» резко подскочил</div>
+  </div>
+  <div class="column">
+    <img src="/img/news/stopcovid.jpg" onclick="openModal();currentSlide(6)" class="hover-shadow cursor">
+    <div class="bottom-left">Ограничения в регионах: что изменилось на неделе?</div>
+  </div>
+/*
+const slides = document.getElementsByClassName("slide");
+
+function openModal() {
+  document.getElementById("modal").classList.add("show");
+}
+
+function closeModal() {
+  document.getElementById("modal").classList.remove("show");
+}
+
+var slideIndex = 1;
+
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+
+  for (let i = 0; i < slides.length; i++) {
+      slides[i].classList.remove("show");
+  }
+
+  slides[slideIndex - 1].classList.add("show");
+}

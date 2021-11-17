@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Oxygen", sans-serif;
+}
+
+body {
+  background-image: url("images/homepagecrop.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-bottom: 50px;
+}
+
+@media screen and (max-width: 1040px) {
+  body {
+    margin-bottom: 60px;
+    background-image: url("images/homepagecrop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
