@@ -1,11 +1,23 @@
+
+
 .page-header {
   display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  padding: 15px 30px;
+  flex-direction: column;
+  background-image: url("images/homepagecropv.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  padding: 30px;
+
+  .navigation-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
 
   .brand {
-    color: #FFFEFE;
+    color: #fefefe;
     font-size: 25px;
     text-transform: uppercase;
     text-decoration: none;
@@ -17,45 +29,34 @@
     display: none;
   }
 
-  nav {
-    position: relative;
-    margin-left: 450px;
-  }
+  .navigation {
+    display: flex;
+    align-self: center;
 
-  nav .navigation-items a {
-    color: #FFFEFE;
-    font-size: 14px;
-    font-weight: bold;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    text-decoration: none;
-    text-align: center;
-    position: relative;
-    margin-left: 20px;
-    transition: 0.3s ease;
-  }
+    a {
+      --color: #fefefe;
 
-  nav .navigation-items a::before {
-    content: "";
-    position: absolute;
-    background: #FFFEFE;
-    width: 0;
-    height: 1.5px;
-    bottom: 0;
-    left: 0;
-    transition: 0.4s ease;
-  }
+      border-bottom: 2px solid transparent;
+      color: var(--color);
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      text-decoration: none;
+      margin-left: 20px;
+      transition: 0.3s ease;
+    }
 
-  nav .navigation-items a:hover::before {
-    width: 100%;
+    a:hover {
+      border-bottom-color: var(--color);
+    }
   }
 
   button {
     display: inline-block;
     border: 1px;
     border-radius: 12px;
-    padding: 5px 3px;
-    margin: 0;
+    margin-right: 10px;
     background-color: transparent;
     opacity: 1;
     color: #FFFEFE;
@@ -74,7 +75,37 @@
     text-decoration: none;
   }
 
+  .logo {
+    align-self: center;
+    flex-grow: 1;
+    object-fit: contain;
+    width: 375px;
+  }
+
   @media screen and (max-width: 1040px) {
+    .navigation {
+      display: none;
+      flex-grow: 1;
+      align-self: unset;
+      background: rgba(1, 1, 1, 0.75);
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      height: 500px;
+      width: 100%;
+      box-shadow: 0 0 5px #fefefe;
+
+      &.active {
+        display: flex;
+      }
+
+      a {
+        margin-bottom: 15px;
+        margin-left: 0;
+      }
+    }
+
     .menu-btn {
       display: block;
       position: absolute;
@@ -86,47 +117,18 @@
       z-index: 999;
     }
 
-    nav {
-      display: none;
+    .buttons {
+      display: flex;
+      flex-direction: row;
       margin: auto;
+      padding: 0;
+      z-index: 888;
+      transition: 0.5s ease;
     }
 
-    .navigation.active {
-      display: flex;
-      justify-content: flex-start;
-      align-items: center;
-      position: absolute; /*fixed*/
-      width: 100%;
-      height: 100vh;
-      top: 0;
-      left: 0;
-      background: rgba(1, 1, 1, 0.6);
-    }
-
-    nav .navigation-items a {
-      color: rgba(255, 255, 255, 1);
-      font-size: 20px;
-      margin: 30px;
-    }
-
-    nav .navigation-items a:before {
-      background: rgba(255, 255, 255, 1);
-      height: 1.5px;
-    }
-
-    nav.active .navigation-items {
-      display: flex;
-      flex-direction: column;
-      background: rgb(1, 1, 1);
-      opacity: 0.75;
-      width: 600px;
-      max-width: 600px;
-      margin: 20px;
-      padding: 40px;
-      align-items: center;
-      border-radius: 5px;
-      box-shadow: 0 5px 25px rgba(1, 1, 1, 0.2);
-      text-shadow: 1px 1px #3B0B2F;
+    .buttons a {
+      color: #FFFEFE;
+      transition: 0.3s ease;
     }
   }
 }

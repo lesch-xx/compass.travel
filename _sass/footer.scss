@@ -1,7 +1,7 @@
 .page-footer {
   text-align: center;
   flex-wrap: wrap;
-  position: fixed;
+  position: relative;
   left: 0;
   bottom: 0;
   width: 100%;
@@ -10,7 +10,7 @@
   letter-spacing: 3px;
   font-size: 10px;
   text-transform: uppercase;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.6);
   padding: 15px 0;
   z-index: 999;
 
