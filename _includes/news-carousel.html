@@ -1,0 +1,119 @@
+<div class="carousel">
+  <div class="previous" id="carouselPreviousBtn">
+    <i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
+  </div>
+  <ul class="news" id="carouselList">
+    <li>
+      <img src="img/news/covid.png">
+      <a href="#modal">
+        <span>Pellentesque habitant morbi tristique senectus et netus
+        et malesuada fames ac turpis egestas.</span>
+      </a>
+    </li>
+    <li>
+      <img src="img/news/london.png">
+      <a href="#modal">
+        <span>Pellentesque habitant morbi tristique senectus et netus
+        et malesuada fames ac turpis egestas.</span>
+      </a>
+    </li>
+    <li>
+      <img src="img/news/dubai.png">
+      <a href="#modal">
+        <span>Pellentesque habitant morbi tristique senectus et netus
+        et malesuada fames ac turpis egestas.</span>
+      </a>
+    </li>
+    <li>
+      <img src="img/news/madeira.png">
+      <a href="#modal">
+        <span>Pellentesque habitant morbi tristique senectus et netus
+        et malesuada fames ac turpis egestas.</span>
+      </a>
+    </li>
+    <li>
+      <img src="img/news/oae.png">
+      <a href="#modal">
+        <span>Pellentesque habitant morbi tristique senectus et netus
+        et malesuada fames ac turpis egestas.</span>
+      </a>
+    </li>
+    <li>
+      <img src="img/news/oae.png">
+      <a href="#modal">
+        <span>Pellentesque habitant morbi tristique senectus et netus
+        et malesuada fames ac turpis egestas.</span>
+      </a>
+    </li>
+    <li>
+      <img src="img/news/ski.png">
+      <a href="#modal">
+        <span>Pellentesque habitant morbi tristique senectus et netus
+        et malesuada fames ac turpis egestas.</span>
+      </a>
+    </li>
+    <li>
+      <img src="img/news/oae.png">
+      <a href="#modal">
+        <span>Pellentesque habitant morbi tristique senectus et netus
+        et malesuada fames ac turpis egestas.</span>
+      </a>
+    </li>
+    <li>
+      <img src="img/news/madeira.png">
+      <a href="#modal">
+        <span>Pellentesque habitant morbi tristique senectus et netus
+        et malesuada fames ac turpis egestas.</span>
+      </a>
+    </li>
+    <li>
+      <img src="img/news/ski.png">
+      <a href="#modal">
+        <span>Pellentesque habitant morbi tristique senectus et netus
+        et malesuada fames ac turpis egestas.</span>
+      </a>
+    </li>
+  </ul>
+  <div class="next" id="carouselNextBtn">
+    <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+  </div>
+</div>
+<div class="open">
+  <div id="modal">
+    <div class="modal__window">
+      <a class="modal__close" href="#"><i class="fa fa-times-circle" aria-hidden="true"></i></a>
+      <h2>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</h2>
+      <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+    </div>
+  </div>
+</div>
+<script>
+  // carousel
+  const previousBtn = document.getElementById('carouselPreviousBtn');
+  const nextBtn = document.getElementById('carouselNextBtn');
+  const carouselList= document.getElementById('carouselList');
+  const items = document.querySelectorAll('#carouselList li');
+  const scrollIndex = 1;
+  let index = 0;
+
+  previousBtn.addEventListener("click", () => {
+    index = index - scrollIndex;
+
+    if (index < 0) {
+      index = 0;
+    }
+    items[index].scrollIntoView({behavior: 'smooth'});
+  });
+
+  nextBtn.addEventListener("click", () => {
+    const total = items.length - 1;
+
+    index = index + scrollIndex;
+
+    if (index >= total) {
+      index = total;
+    }
+
+    items[index].scrollIntoView({behavior: 'smooth'});
+  });
+</script>
