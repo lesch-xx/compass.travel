@@ -1,0 +1,134 @@
+
+
+.page-header {
+  display: flex;
+  flex-direction: column;
+  background-image: url("images/homepagecropv.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 500px;
+  padding: 30px;
+
+  .navigation-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .brand {
+    color: #fefefe;
+    font-size: 25px;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 2px;
+    font-family: "Uchen", serif;
+  }
+
+  .menu-btn {
+    display: none;
+  }
+
+  .navigation {
+    display: flex;
+    align-self: center;
+
+    a {
+      --color: #fefefe;
+
+      border-bottom: 2px solid transparent;
+      color: var(--color);
+      font-size: 14px;
+      font-weight: bold;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      text-decoration: none;
+      margin-left: 20px;
+      transition: 0.3s ease;
+    }
+
+    a:hover {
+      border-bottom-color: var(--color);
+    }
+  }
+
+  button {
+    display: inline-block;
+    border: 1px;
+    border-radius: 12px;
+    margin-right: 10px;
+    background-color: transparent;
+    opacity: 1;
+    color: #FFFEFE;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #FFFEFE;
+    color: #010001;
+    text-decoration: none;
+  }
+
+  .logo {
+    align-self: center;
+    flex-grow: 1;
+    object-fit: contain;
+    width: 375px;
+  }
+
+  @media screen and (max-width: 1040px) {
+    .navigation {
+      display: none;
+      flex-grow: 1;
+      align-self: unset;
+      background: rgba(1, 1, 1, 0.75);
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      height: 500px;
+      width: 100%;
+      box-shadow: 0 0 5px #fefefe;
+
+      &.active {
+        display: flex;
+      }
+
+      a {
+        margin-bottom: 15px;
+        margin-left: 0;
+      }
+    }
+
+    .menu-btn {
+      display: block;
+      position: absolute;
+      color: #FFFFFE;
+      font-size: 30px;
+      right: 20px;
+      cursor: pointer;
+      transition: 0.3s ease;
+      z-index: 999;
+    }
+
+    .buttons {
+      display: flex;
+      flex-direction: row;
+      margin: auto;
+      padding: 0;
+      z-index: 888;
+      transition: 0.5s ease;
+    }
+
+    .buttons a {
+      color: #FFFEFE;
+      transition: 0.3s ease;
+    }
+  }
+}
