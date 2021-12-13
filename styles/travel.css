@@ -89,7 +89,7 @@ section {
   background: #FBEEF5;
 }
 
-.home:before {
+.home::before {
   z-index: 777;
   content: "";
   position: absolute;
@@ -206,7 +206,9 @@ section {
   gap: 20px;
 }
 
-input[type=text], select, textarea {
+input[type=text],
+select,
+textarea {
   width: 100%;
   padding: 12px;
   border: 1px solid #ccc;
@@ -245,8 +247,7 @@ input[type=submit]:hover {
   left: 50%;
   width: 40px;
   height: 40px;
-  transform: translateY(-80px) translateX(-50%)
-             rotate(45deg);
+  transform: translateY(-80px) translateX(-50%) rotate(45deg);
   z-index: 999;
 }
 
