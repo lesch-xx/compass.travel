@@ -79,8 +79,8 @@
           <div class="mySlides fade">
             <img src="img/travel/stmoritz3.jpg">
           </div>
-          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          <a class="prev" id="prevBtn1">&#10094;</a>
+          <a class="next" id="nextBtn1">&#10095;</a>
         </div>
      </div>
      <div class="description">
@@ -108,7 +108,7 @@
       <br>
       <h3>Прокатиться на горках знаменитого аквапарка Wild Wadi Dubai!</h3>
       <br>
-      <div class="advice">
+      <!-- <div class="advice">
         <div class="slideshow-container">
           <div class="mySlides fade">
             <img src="img/travel/wildwadi.jpg">
@@ -119,8 +119,8 @@
           <div class="mySlides fade">
             <img src="img/travel/wildwadi2.jpg">
           </div>
-          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          <a class="prev" id="prevBtn2">&#10094;</a>
+          <a class="next"id="nextBtn2">&#10095;</a>
         </div>
      </div>
      <div class="description">
@@ -146,7 +146,7 @@
          <br>
          Посещение данного парка бесплатное!
        </p>
-      </div>
+     </div>-->
  </div>
  <div class="contactus">
    <p>Чтобы узнать подробности, пожалуйста, свяжитесь с нами удобным для Вас способом</p>
@@ -192,29 +192,47 @@
         navigation.classList.toggle("active");
       });
 
-      //slideshow
       var slideIndex = 1;
       showSlides(slideIndex);
 
-      function plusSlides(n) {
+      function plusSlides (n) {
         showSlides(slideIndex += n);
       }
 
-      function currentSlide(n) {
+      function currentSlide (n) {
         showSlides(slideIndex = n);
       }
 
-      function showSlides(n) {
+      function showSlides (n) {
         var i;
         var slides = document.getElementsByClassName("mySlides");
-        if (n > slides.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = slides.length}
+
+        if (n > slides.length) {
+          slideIndex = 1;
+        }
+
+        if (n < 1) {
+          slideIndex = slides.length;
+        }
+
         for (i = 0; i < slides.length; i++) {
             slides[i].style.display = "none";
         }
-        slides[slideIndex-1].style.display = "block";
+
+        slides[slideIndex - 1].style.display = "block";
       };
 
+      //slideshow
+      const prevBtn1 = document.getElementById('prevBtn1');
+      const nextBtn1 = document.getElementById('nextBtn1');
+
+      prevBtn1.addEventListener("click", () => {
+        plusSlides(-1);
+      });
+
+      nextBtn1.addEventListener("click", () => {
+        plusSlides(1);
+      });
     </script>
     <div class="footer">
       <address>
