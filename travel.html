@@ -72,16 +72,16 @@
 
       <div class="advice">
         <div class="slideshow-container">
-          <div class="mySlides fade">
+          <div class="mySlides fade slide1">
             <img src="img/travel/stmoritz.jpg">
           </div>
-          <div class="mySlides fade">
+          <div class="mySlides fade slide1">
             <img src="img/travel/stmoritz1.jpg">
           </div>
-          <div class="mySlides fade">
+          <div class="mySlides fade slide1">
             <img src="img/travel/stmoritz2.jpg">
           </div>
-          <div class="mySlides fade">
+          <div class="mySlides fade slide1">
             <img src="img/travel/stmoritz3.jpg">
           </div>
           <a class="prev" id="prevBtn1">&#10094;</a>
@@ -115,45 +115,47 @@
       <br>
       <h3>Прокатиться на горках знаменитого аквапарка Wild Wadi Dubai!</h3>
       <br>
-      <!-- <div class="advice">
+
+      <div class="advice">
         <div class="slideshow-container">
-          <div class="mySlides fade">
+          <div class="mySlides fade slide2">
             <img src="img/travel/wildwadi.jpg">
           </div>
-          <div class="mySlides fade">
+          <div class="mySlides fade slide2">
             <img src="img/travel/wildwadi1.jpg">
           </div>
-          <div class="mySlides fade">
+          <div class="mySlides fade slide2">
             <img src="img/travel/wildwadi2.jpg">
           </div>
           <a class="prev" id="prevBtn2">&#10094;</a>
-          <a class="next"id="nextBtn2">&#10095;</a>
+          <a class="next" id="nextBtn2">&#10095;</a>
         </div>
-     </div>
-     <div class="description">
-       <p><span>Wild Wadi Dubai</span> - это одно из лучших мест для детского отдыха!
-         <br>
-         Почти 5 га с садами, реками и водными горками. Среди особенностей парка — 18
-         метровый водопад-ливень со светомузыкой Wadi Wash, который запускается каждые 10 минут,
-         пляж на берегу искусственной лагуны, уникальные волновые бассейны для серфинга.
-         Именно здесь находится всемирно знаменитая скоростная горка-труба «Jumeirah Scierah»
-         <br>
-         Для маленьких детей предлагаются специальные небольшие горки, мелководные лагуны,
-         бассейны и водометы, игры, и т. д.
-         <br>
-         <br>
-         <span>Уникальная возможность для гостей отелей:</span>
-         <br>
-         Burj Al Arab Jumeirah 5<i class="fa fa-star" aria-hidden="true"></i>DeLuxe<br>
-         Jumeirah Beach Hotel 5<i class="fa fa-star" aria-hidden="true"></i>DeLuxe<br>
-         Jumeirah Al Naseem 5<i class="fa fa-star" aria-hidden="true"></i>DeLuxe<br>
-         Jumeirah Al Qasr 5<i class="fa fa-star" aria-hidden="true"></i>DeLuxe<br>
-         Jumeirah Dar Al Masyaf 5<i class="fa fa-star" aria-hidden="true"></i>DeLuxe<br>
-         Jumeirah Mina A’Salam 5<i class="fa fa-star" aria-hidden="true"></i>DeLuxe<br>
-         <br>
-         Посещение данного парка бесплатное!
-       </p>
-     </div>-->
+      </div>
+
+      <div class="description">
+        <p><span>Wild Wadi Dubai</span> - это одно из лучших мест для детского отдыха!
+          <br>
+          Почти 5 га с садами, реками и водными горками. Среди особенностей парка — 18
+          метровый водопад-ливень со светомузыкой Wadi Wash, который запускается каждые 10 минут,
+          пляж на берегу искусственной лагуны, уникальные волновые бассейны для серфинга.
+          Именно здесь находится всемирно знаменитая скоростная горка-труба «Jumeirah Scierah»
+          <br>
+          Для маленьких детей предлагаются специальные небольшие горки, мелководные лагуны,
+          бассейны и водометы, игры, и т. д.
+          <br>
+          <br>
+          <span>Уникальная возможность для гостей отелей:</span>
+          <br>
+          Burj Al Arab Jumeirah 5<i class="fa fa-star" aria-hidden="true"></i>DeLuxe<br>
+          Jumeirah Beach Hotel 5<i class="fa fa-star" aria-hidden="true"></i>DeLuxe<br>
+          Jumeirah Al Naseem 5<i class="fa fa-star" aria-hidden="true"></i>DeLuxe<br>
+          Jumeirah Al Qasr 5<i class="fa fa-star" aria-hidden="true"></i>DeLuxe<br>
+          Jumeirah Dar Al Masyaf 5<i class="fa fa-star" aria-hidden="true"></i>DeLuxe<br>
+          Jumeirah Mina A’Salam 5<i class="fa fa-star" aria-hidden="true"></i>DeLuxe<br>
+          <br>
+          Посещение данного парка бесплатное!
+        </p>
+      </div>
     </div>
 
     <div class="contactus">
@@ -206,47 +208,67 @@
       navigation.classList.toggle("active");
     });
 
-    var slideIndex = 1;
-    showSlides(slideIndex);
 
-    function plusSlides (n) {
-      showSlides(slideIndex += n);
+
+    class Slideshow {
+      constructor (slides, prevButton, nextButton, index = 1) {
+        const CLICK_EVENT = 'click';
+
+        this.slides = slides;
+        this.size = slides.length;
+        this.index = index;
+
+        this.display(index);
+
+        prevButton.addEventListener(CLICK_EVENT, () => {
+          this.prev();
+        });
+        nextButton.addEventListener(CLICK_EVENT, () => {
+          this.next();
+        });
+      }
+
+      showIndex (n) {
+        if (n > this.size) {
+          this.index = 1;
+        }
+
+        if (n < 1) {
+          this.index = this.size;
+        }
+
+        for (let i = 0; i < this.size; i++) {
+            this.slides[i].style.display = 'none';
+        }
+
+        this.slides[this.index - 1].style.display = 'block';
+      }
+
+      prev () {
+        this.display(this.index - 1);
+      }
+
+      next () {
+        this.display(this.index + 1);
+      }
+
+      display (index) {
+        this.index = index;
+        this.showIndex(index);
+      }
     }
 
-    function currentSlide (n) {
-      showSlides(slideIndex = n);
-    }
+    const slideshow1 = new Slideshow(
+      document.getElementsByClassName('slide1'),
+      document.getElementById('prevBtn1'),
+      document.getElementById('nextBtn1'),
+    );
 
-    function showSlides (n) {
-      var i;
-      var slides = document.getElementsByClassName("mySlides");
-
-      if (n > slides.length) {
-        slideIndex = 1;
-      }
-
-      if (n < 1) {
-        slideIndex = slides.length;
-      }
-
-      for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-      }
-
-      slides[slideIndex - 1].style.display = "block";
-    };
-
-    // Slideshow
-    const prevBtn1 = document.getElementById('prevBtn1');
-    const nextBtn1 = document.getElementById('nextBtn1');
-
-    prevBtn1.addEventListener("click", () => {
-      plusSlides(-1);
-    });
-
-    nextBtn1.addEventListener("click", () => {
-      plusSlides(1);
-    });
+    const slideshow2 = new Slideshow(
+      document.getElementsByClassName('slide2'),
+      document.getElementById('prevBtn2'),
+      document.getElementById('nextBtn2'),
+    );
   </script>
 </body>
 </html>
