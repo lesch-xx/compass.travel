@@ -1,0 +1,51 @@
+.page-footer {
+  text-align: center;
+  flex-wrap: wrap;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: #FFFEFE;
+  font-weight: bold;
+  letter-spacing: 3px;
+  font-size: 10px;
+  text-transform: uppercase;
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 15px 0;
+  z-index: 999;
+
+  address {
+    text-decoration: none;
+    font-style: normal;
+  }
+
+  address a {
+    color: #FFFEFE;
+    cursor: pointer;
+  }
+}
+
+@media screen and (max-width: 1040px) {
+  .page-footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: #FFFEFE;
+    font-size: 10px;
+    font-weight: 300;
+    text-align: center;
+    flex-wrap: wrap;
+    z-index: 999;
+
+    address {
+      text-decoration: none;
+      font-style: normal;
+    }
+
+    address a {
+      color: #FFFEFE;
+      cursor: pointer;
+    }
+  }
+}

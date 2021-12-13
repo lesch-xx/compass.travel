@@ -1,0 +1,204 @@
+
+.news {
+  overflow-x: hidden;
+  flex-grow: 1;
+  white-space: nowrap;
+  background-color: black;
+}
+
+.news li {
+  display: inline-block;
+  height: 300px;
+  width: 400px;
+  margin: 0 10px;
+  position: relative;
+  cursor: pointer;
+}
+
+.news li:before {
+  background: rgba(11, 9, 10, 0.3);
+  content: "";
+  position: absolute;
+  position: 6;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+.news li img {
+  border-radius: 10px;
+}
+
+.news span {
+  position: absolute; /* Position the background text */
+  bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+  background: rgb(0, 0, 0); /* Fallback color */
+  background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+  color: #f1f1f1; /* Grey text */
+  width: 90%; /* Full width */
+  padding: 30px; /* Some padding */
+  text-align: center;
+  z-index: 3;
+  left: 0;
+  margin-bottom: 10px;
+  white-space: pre-wrap;
+}
+
+.carousel {
+  display: flex;
+  margin: 20px 10px 10px 10px;
+  background: black;
+}
+
+.previous,
+.next {
+  font-size: 30px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: white;
+  z-index: 888;
+}
+
+.previous,
+.next .fa {
+  margin: 10px;
+}
+
+#modal {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0,0,0,.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal__window {
+  position: relative;
+  background-color: white;
+  padding: 4em 2em;
+  white-space: pre-wrap;
+  margin: 100px;
+}
+
+#modal h2 {
+  text-align: center;
+}
+
+.modal__close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  colour: black;
+}
+
+#modal:not(:target) {
+    visibility: hidden;
+    opacity: 0;
+}
+
+@media screen and (max-width: 400px) {
+  .news {
+    overflow-x: hidden;
+    flex-grow: 1;
+    white-space: nowrap;
+    background-color: black;
+  }
+
+  .news li {
+    display: inline-block;
+    height: 300px;
+    width: 350px;
+    margin: 0 0;
+    position: relative;
+    cursor: pointer;
+  }
+
+  .news li:before {
+    background: rgba(11, 9, 10, 0.3);
+    content: "";
+    position: absolute;
+    position: 6;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+  }
+
+  .news span {
+    position: absolute; /* Position the background text */
+    bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+    background: rgb(0, 0, 0); /* Fallback color */
+    background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+    color: #f1f1f1; /* Grey text */
+    width: auto; /* Full width */
+    padding: 30px; /* Some padding */
+    text-align: center;
+    z-index: 3;
+    left: 0;
+    white-space: pre-wrap;
+    margin-bottom: 0;
+  }
+
+  .carousel {
+    display: flex;
+    margin: 20px 0 10px 0;
+    background: black;
+  }
+
+  .previous,
+  .next {
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: white;
+    z-index: 888;
+  }
+
+  .previous,
+  .next .fa {
+    margin: 10px;
+  }
+
+  #modal {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal__window {
+    position: relative;
+    background-color: white;
+    padding: 4em 2em;
+    white-space: pre-wrap;
+    margin: 100px;
+  }
+
+  #modal h2 {
+    text-align: center;
+  }
+
+  .modal__close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    colour: black;
+  }
+
+  #modal:not(:target) {
+      visibility: hidden;
+      opacity: 0;
+  }
+}
