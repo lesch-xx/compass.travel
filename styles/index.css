@@ -16,6 +16,15 @@
   font-family: "MyriadPro", sans-serif;
 }
 
+html,
+body {
+  height: 100%;
+}
+
+main {
+  flex-grow: 1;
+}
+
 header {
   z-index: 999;
   position: absolute;
@@ -36,10 +45,6 @@ header .brand {
   text-decoration: none;
   font-weight: bold;
   letter-spacing: -2px;
-}
-
-header .brand img {
-  vertical-align: top;
 }
 
 header .navigation {
@@ -125,7 +130,7 @@ section {
 
 .home .content a {
   background: rgb(1, 1, 1);
-  opacity: 0.5;
+  opacity: 0.8;
   padding: 15px 25px;
   color: #FFFFFE;
   font-size: 20px;
@@ -230,7 +235,7 @@ input[type=submit]:hover {
   color: black;
 }
 
-.home video {
+.home img {
   z-index: 000;
   position: absolute;
   top: 0;
@@ -259,6 +264,7 @@ input[type=submit]:hover {
   box-shadow: 0 0 2px rgba(255, 255,255, 0.5);
   transition: 0.3s ease;
 }
+
 .slider-navigation .nav-btn.active {
   background: rgba(252, 237, 245, 0.47);
 }
@@ -283,17 +289,116 @@ input[type=submit]:hover {
  transition-property: clip-path;
 }
 
-.footer {
-  position: fixed;
+.menu-btn {
+  display: none;
+}
+
+.scrolldown {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  width: 40px;
+  height: 40px;
+  transform: translateY(-80px) translateX(-50%)
+             rotate(45deg);
+  z-index: 999;
+}
+
+.scrolldown span {
+  position: absolute;
+  top: 0;
   left: 0;
-  bottom: 0;
+  display: block;
   width: 100%;
-  color: #FFFEFE;
-  font-size: 20px;
-  font-weight: 300;
+  height: 100%;
+  border-bottom: 3px solid #FFFEFE;
+  border-right: 3px solid #FFFEFE;
+  animation: animate 1.5s linear infinite;
+  z-index: 999;
+}
+
+.scrolldown span:nth-child(1) {
+  transform: translate(-15px, -15px);
+}
+
+.scrolldown span:nth-child(2) {
+  transform: translate(0, 0);
+}
+
+@keyframes animate {
+  0% {
+    top: -5px;
+    left: -5px;
+    opacity: 1;
+  }
+
+  100% {
+    top: 5px;
+    left: 5px;
+    opacity: 1;
+  }
+}
+
+.allnews {
+  max-width: 100%;
+  margin: auto;
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+
+}
+
+.news {
+  display: block;
+  background-color: #FFFEFE;
+  opacity: 0.8;
+  color: rgb(1, 1, 1);
+  padding: 1rem;
+  height: auto;
+}
+
+.news h3 {
   text-align: center;
+}
+
+.news p {
+  text-align: justify;
+}
+
+.news span {
+  font-style: italic;
+  float: right;
+  color: rgb(1, 1, 1, 0.7);
+}
+
+.newsbutton a {
+  display: flex;
+  width: 180px;
+  margin: auto;
+  margin-bottom: 10px;
+  justify-content: center;
+  background: rgb(1, 1, 1);
+  opacity: 0.8;
+  padding: 15px 25px;
+  color: #FFFFFE;
+  font-size: 20px;
+  font-weight: 400;
+  text-decoration: none;
+  border-radius: 2px;
+}
+
+.footer {
+  display: block;
+  position: sticky;
+  text-align: center;
+  padding-top: 15px;
+  width: 100%;
+  height: 50px;
+  color: rgb(1, 1, 1, 0.8);
+  font-size: 20px;
   flex-wrap: wrap;
   z-index: 999;
+  border-top: 2px solid black;
 }
 
 .footer address {
@@ -302,12 +407,8 @@ input[type=submit]:hover {
 }
 
 .footer address a {
-  color: #FFFEFE;
+  color: rgb(1, 1, 1, 0.8);
   cursor: pointer;
-}
-
-.menu-btn {
-  display: none;
 }
 
 @media (max-width: 1040px) {
@@ -317,6 +418,12 @@ input[type=submit]:hover {
 
   section {
     padding: 100px 20px;
+  }
+
+  .video-slide {
+    object-fit: cover;
+    width: auto;
+    object-position: center;
   }
 
   .home .media-icons {
@@ -336,6 +443,7 @@ input[type=submit]:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     background: rgba(1, 1, 1, 0.6);
   }
 
@@ -366,16 +474,11 @@ input[type=submit]:hover {
   }
 
   .home .content h1 {
-    font-size: 40px;
+    font-size: 35px;
     text-transform: uppercase;
     letter-spacing: 2px;
-    line-height: 50px;
+    line-height: 40px;
     margin-bottom: 20px;
-  }
-  .home .content h1 span {
-    font-size: 60px;
-    font-weight: bold;
-    letter-spacing: 0;
   }
 
   .menu-btn {
@@ -401,17 +504,22 @@ input[type=submit]:hover {
     z-index: 1000;
   }
 
+  .allnews {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
   .footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    color: #FFFEFE;
-    font-size: 10px;
-    font-weight: 300;
+    display: block;
+    position: sticky;
     text-align: center;
+    padding: 15px;
+    width: 100%;
+    height: 50px;
+    color: rgb(1, 1, 1, 0.8);
+    font-size: 17px;
     flex-wrap: wrap;
     z-index: 999;
+    border-top: 2px solid black;
   }
 
   .footer address {
@@ -420,6 +528,13 @@ input[type=submit]:hover {
   }
 
   .footer address a {
-    color: #FFFEFE;
+    color: rgb(1, 1, 1, 0.8);
     cursor: pointer;
   }
+
+
+@media (min-width: 600px) {
+  .allnews {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
