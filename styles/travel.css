@@ -378,6 +378,10 @@ input[type=submit]:hover {
   font-weight: bold;
 }
 
+.description .fa {
+  vertical-align: super;
+  font-size: 10px;
+}
 
 .contactus p {
   display: flex;
