@@ -1,20 +1,8 @@
 ---
+layout: default
+styles: travel.css
 ---
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Ваш лучший гид по путешествиям">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="styles/travel.css">
-  <title>Compass.Travel</title>
-</head>
-
-<body>
-  {% include header.html %}
-  <main>
-    <section class="home">
+<section class="home">
       <img class="video-slide" src="img/main/palm2.jpg"></img>
       <div class="content">
         <h1>Путешествия</h1>
@@ -133,69 +121,66 @@
       <a href="tel:+74950181680"><i class="fa fa-phone-square" target="_blank"></i></a>
       <a href="#" class="contact-btn"><i class="fa fa-envelope-square"></i></a>
     </div>
-  </main>
-  <script>
-    //slideshow for travel
-    class Slideshow {
-      constructor (slides, prevButton, nextButton, index = 1) {
-        const CLICK_EVENT = 'click';
 
-        this.slides = slides;
-        this.size = slides.length;
-        this.index = index;
+<script>
+  //slideshow for travel
+  class Slideshow {
+    constructor (slides, prevButton, nextButton, index = 1) {
+      const CLICK_EVENT = 'click';
 
-        this.display(index);
+      this.slides = slides;
+      this.size = slides.length;
+      this.index = index;
 
-        prevButton.addEventListener(CLICK_EVENT, () => {
-          this.prev();
-        });
-        nextButton.addEventListener(CLICK_EVENT, () => {
-          this.next();
-        });
-      }
+      this.display(index);
 
-      showIndex (n) {
-        if (n > this.size) {
-          this.index = 1;
-        }
-
-        if (n < 1) {
-          this.index = this.size;
-        }
-
-        for (let i = 0; i < this.size; i++) {
-            this.slides[i].style.display = 'none';
-        }
-
-        this.slides[this.index - 1].style.display = 'block';
-      }
-
-      prev () {
-        this.display(this.index - 1);
-      }
-
-      next () {
-        this.display(this.index + 1);
-      }
-
-      display (index) {
-        this.index = index;
-        this.showIndex(index);
-      }
+      prevButton.addEventListener(CLICK_EVENT, () => {
+        this.prev();
+      });
+      nextButton.addEventListener(CLICK_EVENT, () => {
+        this.next();
+      });
     }
 
-    const slideshow1 = new Slideshow(
-      document.getElementsByClassName('slide1'),
-      document.getElementById('prevBtn1'),
-      document.getElementById('nextBtn1'),
-    );
+    showIndex (n) {
+      if (n > this.size) {
+        this.index = 1;
+      }
 
-    const slideshow2 = new Slideshow(
-      document.getElementsByClassName('slide2'),
-      document.getElementById('prevBtn2'),
-      document.getElementById('nextBtn2'),
-    );
-  </script>
-  {% include footer.html %}
-</body>
-</html>
+      if (n < 1) {
+        this.index = this.size;
+      }
+
+      for (let i = 0; i < this.size; i++) {
+          this.slides[i].style.display = 'none';
+      }
+
+      this.slides[this.index - 1].style.display = 'block';
+    }
+
+    prev () {
+      this.display(this.index - 1);
+    }
+
+    next () {
+      this.display(this.index + 1);
+    }
+
+    display (index) {
+      this.index = index;
+      this.showIndex(index);
+    }
+  }
+
+  const slideshow1 = new Slideshow(
+    document.getElementsByClassName('slide1'),
+    document.getElementById('prevBtn1'),
+    document.getElementById('nextBtn1'),
+  );
+
+  const slideshow2 = new Slideshow(
+    document.getElementsByClassName('slide2'),
+    document.getElementById('prevBtn2'),
+    document.getElementById('nextBtn2'),
+  );
+</script>
