@@ -431,11 +431,11 @@ main h2 {
   padding-top: 15px;
   width: 100%;
   height: 50px;
-  color: rgb(1, 1, 1, 0.8);
+  color: #FFFFFE;
   font-size: 20px;
   flex-wrap: wrap;
   z-index: 999;
-  border-top: 2px solid black;
+  background: rgb(1, 1, 1, 0.9);
 }
 
 .footer address {
@@ -444,7 +444,7 @@ main h2 {
 }
 
 .footer address a {
-  color: rgb(1, 1, 1, 0.8);
+  color: #FFFFFE;
   cursor: pointer;
 }
 
