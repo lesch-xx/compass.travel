@@ -457,12 +457,12 @@ main h2 {
     padding: 100px 20px;
   }
 
-  .home img {
+  .video-slide {
     object-fit: cover;
-    width: 1040px;
-
-
+    width: auto;
+    object-position: center;
   }
+  
   .home .media-icons {
     right: 15px;
   }
