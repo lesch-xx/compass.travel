@@ -1,186 +1,168 @@
 ---
+layout: default
+styles: jets.css
 ---
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Ваш лучший гид по путешествиям">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="styles/jets.css">
-    <title>Compass.Travel</title>
-  </head>
-  <body>
-   {% include header.html %}
-    <main>
-      <section class="home">
-     <img class="video-slide" src="img/main/jet.jpg"></img>
-     <div class="content">
-       <h1>Бизнес Авиация</h1>
-       <p>Доступен обширный green list стран — вы узнаете первыми
-        об актуальных возможностях легального обхода ограничений.<br>
-        Будьте на шаг впереди вместе с нами и нашими партнерами.</p>
-         </div>
-     {% include media-menu.html %}
-      <div class="scrolldown">
-        <a href="#tab"><span></span>
-        <span></span></a>
-      </div>
-   </section>
-   <div class="tab" id="tab">
-    <button class="tablinks" onclick="openCity(event, 'London')">Актуальные Направления</button>
-    <button class="tablinks" onclick="openCity(event, 'Paris')">Парк Самолетов</button>
+<section class="home">
+  <img class="video-slide" src="img/main/jet.jpg"></img>
+  <div class="content">
+    <h1>Бизнес Авиация</h1>
+    <p>Доступен обширный green list стран — вы узнаете первыми
+    об актуальных возможностях легального обхода ограничений.<br>
+    Будьте на шаг впереди вместе с нами и нашими партнерами.</p>
   </div>
-
-  <div id="London" class="tabcontent">
-    <div class="info">
-      <div class="flight">
-        <h2>НИЦЦА / АЛЬБЕНГА</h2>
-        <br>
-        <h4>Полет каждую пятницу и воскресенье</h4>
-        <br>
-        <p class="time"><span>11:00</span> - Внуково 3 <i class="fa fa-fighter-jet" aria-hidden="true"></i> <i class="fa fa-fighter-jet" aria-hidden="true"></i> <i class="fa fa-fighter-jet" aria-hidden="true"></i>
-           <span>12:30</span> - Альбенга(Лигурия)<br>
-           Стоимость за одно место: 5,500 евро</p>
-        <br>
-        <p class="time"><span>17:00</span> - Ницца <i class="fa fa-fighter-jet" aria-hidden="true"></i> <i class="fa fa-fighter-jet" aria-hidden="true"></i> <i class="fa fa-fighter-jet" aria-hidden="true"></i>
-           <span>21:30</span> - Внуково 3
-           <br>
-           Стоимость за одно место: 4,500 евро</p>
-        <br>
-        <p>Вам доступны - Монако, Ницца, Канны, Сан-Ремо, Милан, Пиза и другие
-          города Франции и Италии.</p>
-        <br>
-        <p><span>Борт:</span> EMBRAER LEGACY 600</p>
-        <p><span>Условия въезда:</span> отрицательный ПЦР-тест, сделанный не ранее, чем за 48 часов до вылета</p>
-        <p><span>Основание для полета:</span> Шенгенская виза</p>
-        <p><span>Карантин:</span> нет</p>
-      </div>
-      <div class="flight">
-        <h2>ТУРИН</h2>
-        <br>
-        <h4>Полет 26.12 / 02.01</h4>
-        <br>
-        <p class="time"><span>11:00</span> - Внуково 3 <i class="fa fa-fighter-jet" aria-hidden="true"></i> <i class="fa fa-fighter-jet" aria-hidden="true"></i> <i class="fa fa-fighter-jet" aria-hidden="true"></i>
-           <span>13:30</span> - Турин<br>
-           Стоимость за одно место: 5,500 евро</p>
-        <br>
-        <p>Вам доступны - Валь Д'Аоста, Курмайор, Куршевель, Межев, Церматт, Вербьер, Виллар.</p>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <p><span>Борт:</span> EMBRAER LEGACY 600</p>
-        <p><span>Условия въезда:</span> отрицательный ПЦР-тест, сделанный не ранее, чем за 48 часов до вылета</p>
-        <p><span>Основание для полета:</span> шенгенская виза</p>
-        <p><span>Карантин:</span> нет</p>
-      </div>
-      <div class="flight">
-        <h2>ШАМБЕРИ</h2>
-        <br>
-        <h4>Полет 26.12 / 02.01 / 09.01 / 16.01</h4>
-        <br>
-        <p class="time"><span>11:00</span> - Внуково 3 <i class="fa fa-fighter-jet" aria-hidden="true"></i> <i class="fa fa-fighter-jet" aria-hidden="true"></i> <i class="fa fa-fighter-jet" aria-hidden="true"></i>
-           <span>13:30</span> - Шамбери<br>
-           Стоимость за одно место: 5,500 евро</p>
-        <br>
-        <p class="time"><span>15:00</span> - Шамбери <i class="fa fa-fighter-jet" aria-hidden="true"></i> <i class="fa fa-fighter-jet" aria-hidden="true"></i> <i class="fa fa-fighter-jet" aria-hidden="true"></i>
-           <span>19:30</span> - Внуково 3
-           <br>
-           Стоимость за одно место: 5,500 евро</p>
-        <br>
-        <p>Вам доступны - Куршевель, Валь Торанс, Валь Д'Изер, Мерибель, Межев.</p>
-        <br>
-        <p><span>Борт:</span> EMBRAER LEGACY 600</p>
-        <p><span>Условия въезда:</span> европейский сертификат о вакцинации(Pfizer, Moderna, AstraZeneca/Vaxzevria/Covishield, Johnson & Johnson (Janssen)</p>
-        <p><span>Основание для полета:</span> шенгенская виза</p>
-        <p><span>Карантин:</span> нет</p>
-      </div>
-      <div class="flight">
-        <h2>САНКТ-МОРИЦ</h2>
-        <br>
-        <h4>Полет 26.12 / 02.01 / 09.01 / 16.01</h4>
-        <br>
-        <p class="time"><span>11:00</span> - Внуково 3 <i class="fa fa-fighter-jet" aria-hidden="true"></i> <i class="fa fa-fighter-jet" aria-hidden="true"></i> <i class="fa fa-fighter-jet" aria-hidden="true"></i>
-           <span>13:30</span> - Самедан (Санкт-Мориц)<br>
-           Стоимость за одно место: 5,500 евро</p>
-        <br>
-        <p class="time"><span>15:00</span> - Самедан (Санкт-Мориц) <i class="fa fa-fighter-jet" aria-hidden="true"></i> <i class="fa fa-fighter-jet" aria-hidden="true"></i> <i class="fa fa-fighter-jet" aria-hidden="true"></i>
-           <span>19:30</span> - Внуково 3
-           <br>
-           Стоимость за одно место: 5,500 евро</p>
-        <br>
-        <p>Вам доступны - Санкт-Мориц, Сильваплана, Давос, Ароса.</p>
-        <br>
-        <p><span>Борт:</span> EMBRAER LEGACY 600</p>
-        <p><span>Условия въезда:</span> отрицательный ПЦР-тест, сделанный не ранее, чем за 48 часов до вылета</p>
-        <p><span>Основание для полета:</span> резиденство ЕС / Laissez-Passer</p>
-        <p><span>Карантин:</span> нет</p>
-      </div>
+  {% include media-menu.html %}
+  <div class="scrolldown">
+    <a href="#tab"><span></span>
+    <span></span></a>
+  </div>
+</section>
+<div class="tab" id="tab">
+  <button class="tablinks" onclick="openCity(event, 'London')">Актуальные Направления</button>
+  <button class="tablinks" onclick="openCity(event, 'Paris')">Парк Самолетов</button>
+</div>
+<div id="London" class="tabcontent">
+  <div class="info">
+    <div class="flight">
+      <h2>НИЦЦА / АЛЬБЕНГА</h2>
+      <br>
+      <h4>Полет каждую пятницу и воскресенье</h4>
+      <br>
+      <p class="time"><span>11:00</span> - Внуково 3 <i class="fa fa-fighter-jet" aria-hidden="true"></i> <i class="fa fa-fighter-jet" aria-hidden="true"></i> <i class="fa fa-fighter-jet" aria-hidden="true"></i>
+      <span>12:30</span> - Альбенга(Лигурия)<br>
+      Стоимость за одно место: 5,500 евро</p>
+      <br>
+      <p class="time"><span>17:00</span> - Ницца <i class="fa fa-fighter-jet" aria-hidden="true"></i> <i class="fa fa-fighter-jet" aria-hidden="true"></i> <i class="fa fa-fighter-jet" aria-hidden="true"></i>
+      <span>21:30</span> - Внуково 3
+      <br>
+      Стоимость за одно место: 4,500 евро</p>
+      <br>
+      <p>Вам доступны - Монако, Ницца, Канны, Сан-Ремо, Милан, Пиза и другие
+      города Франции и Италии.</p>
+      <br>
+      <p><span>Борт:</span> EMBRAER LEGACY 600</p>
+      <p><span>Условия въезда:</span> отрицательный ПЦР-тест, сделанный не ранее, чем за 48 часов до вылета</p>
+      <p><span>Основание для полета:</span> Шенгенская виза</p>
+      <p><span>Карантин:</span> нет</p>
     </div>
-     <div class="contactus"><a href="">Узнать подробнее</a></div>
+    <div class="flight">
+      <h2>ТУРИН</h2>
+      <br>
+      <h4>Полет 26.12 / 02.01</h4>
+      <br>
+      <p class="time"><span>11:00</span> - Внуково 3 <i class="fa fa-fighter-jet" aria-hidden="true"></i> <i class="fa fa-fighter-jet" aria-hidden="true"></i> <i class="fa fa-fighter-jet" aria-hidden="true"></i>
+      <span>13:30</span> - Турин<br>
+      Стоимость за одно место: 5,500 евро</p>
+      <br>
+      <p>Вам доступны - Валь Д'Аоста, Курмайор, Куршевель, Межев, Церматт, Вербьер, Виллар.</p>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <p><span>Борт:</span> EMBRAER LEGACY 600</p>
+      <p><span>Условия въезда:</span> отрицательный ПЦР-тест, сделанный не ранее, чем за 48 часов до вылета</p>
+      <p><span>Основание для полета:</span> шенгенская виза</p>
+      <p><span>Карантин:</span> нет</p>
+    </div>
+    <div class="flight">
+      <h2>ШАМБЕРИ</h2>
+      <br>
+      <h4>Полет 26.12 / 02.01 / 09.01 / 16.01</h4>
+      <br>
+      <p class="time"><span>11:00</span> - Внуково 3 <i class="fa fa-fighter-jet" aria-hidden="true"></i> <i class="fa fa-fighter-jet" aria-hidden="true"></i> <i class="fa fa-fighter-jet" aria-hidden="true"></i>
+      <span>13:30</span> - Шамбери<br>
+      Стоимость за одно место: 5,500 евро</p>
+      <br>
+      <p class="time"><span>15:00</span> - Шамбери <i class="fa fa-fighter-jet" aria-hidden="true"></i> <i class="fa fa-fighter-jet" aria-hidden="true"></i> <i class="fa fa-fighter-jet" aria-hidden="true"></i>
+      <span>19:30</span> - Внуково 3
+      <br>
+      Стоимость за одно место: 5,500 евро</p>
+      <br>
+      <p>Вам доступны - Куршевель, Валь Торанс, Валь Д'Изер, Мерибель, Межев.</p>
+      <br>
+      <p><span>Борт:</span> EMBRAER LEGACY 600</p>
+      <p><span>Условия въезда:</span> европейский сертификат о вакцинации(Pfizer, Moderna, AstraZeneca/Vaxzevria/Covishield, Johnson & Johnson (Janssen)</p>
+      <p><span>Основание для полета:</span> шенгенская виза</p>
+      <p><span>Карантин:</span> нет</p>
+    </div>
+    <div class="flight">
+      <h2>САНКТ-МОРИЦ</h2>
+      <br>
+      <h4>Полет 26.12 / 02.01 / 09.01 / 16.01</h4>
+      <br>
+      <p class="time"><span>11:00</span> - Внуково 3 <i class="fa fa-fighter-jet" aria-hidden="true"></i> <i class="fa fa-fighter-jet" aria-hidden="true"></i> <i class="fa fa-fighter-jet" aria-hidden="true"></i>
+      <span>13:30</span> - Самедан (Санкт-Мориц)<br>
+      Стоимость за одно место: 5,500 евро</p>
+      <br>
+      <p class="time"><span>15:00</span> - Самедан (Санкт-Мориц) <i class="fa fa-fighter-jet" aria-hidden="true"></i> <i class="fa fa-fighter-jet" aria-hidden="true"></i> <i class="fa fa-fighter-jet" aria-hidden="true"></i>
+      <span>19:30</span> - Внуково 3
+      <br>
+      Стоимость за одно место: 5,500 евро</p>
+      <br>
+      <p>Вам доступны - Санкт-Мориц, Сильваплана, Давос, Ароса.</p>
+      <br>
+      <p><span>Борт:</span> EMBRAER LEGACY 600</p>
+      <p><span>Условия въезда:</span> отрицательный ПЦР-тест, сделанный не ранее, чем за 48 часов до вылета</p>
+      <p><span>Основание для полета:</span> резиденство ЕС / Laissez-Passer</p>
+      <p><span>Карантин:</span> нет</p>
+    </div>
   </div>
-  <div id="Paris" class="tabcontent">
-    <h2>EMBRAER LEGACY 600</h2>
-    <br>
-    <div class="info" id="info">
-       <div class="description">
-         <p><span>Максимальное количество мест:</span> 13<br>
-            <span>Характеристики ВС:</span><br>
-            <span>Крейсерская скорость:</span> 820км в час<br>
-            <span>Дальность полёта:</span> 6200км / до 5,5 часов<br>
-         <p><span>Характеристики салона</span><br>
-            <span>Длина:</span> 12.95 м<br>
-            <span>Ширина:</span> 2.10 м<br>
-            <span>Высота:</span> 1.82 м<br>
-            <span>Объём багажника:</span> 6.80 м3
-            <img src="img/jets/jet1.png">
-        </div>
-        <div class="jet">
-          <img src="img/jets/jet111.png">
-       </div>
-      </div>
-      <br>
-      <h2> EMBRAER LINEAGE 1000E</h2>
-      <br>
-      <div class="info" id="info">
-         <div class="description">
-           <p><span>Максимальное количество мест:</span> 19<br>
-              <span>Характеристики ВС:</span><br>
-              <span>Крейсерская скорость:</span> 874км в час<br>
-              <span>Дальность полёта:</span> 8519км / до 8 часов<br>
-           <p><span>Характеристики салона</span><br>
-              <span>Длина:</span> 25.7 м<br>
-              <span>Ширина:</span> 2.67 м<br>
-              <span>Высота:</span> 2.01 м<br>
-              <span>Объём багажника:</span> 12,55 м3
-           <img src="img/jets/jet2.png">
-          </div>
-          <div class="jet">
-            <img src="img/jets/jet222.png">
-         </div>
-        </div>
-
- </div>
-</main>
-
-    <script type="text/javascript">
-      //Tab
-      function openCity(evt, cityName) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-          tabcontent[i].style.display = "none";
-        }
-        tablinks = document.getElementsByClassName("tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-          tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-        document.getElementById(cityName).style.display = "block";
-        evt.currentTarget.className += " active";
-      }
-    </script>
-    {% include footer.html %}
-  </body>
-</html>
+  <div class="contactus"><a href="">Узнать подробнее</a></div>
+</div>
+<div id="Paris" class="tabcontent">
+  <h2>EMBRAER LEGACY 600</h2>
+  <br>
+  <div class="info" id="info">
+    <div class="description">
+      <p><span>Максимальное количество мест:</span> 13<br>
+      <span>Характеристики ВС:</span><br>
+      <span>Крейсерская скорость:</span> 820км в час<br>
+      <span>Дальность полёта:</span> 6200км / до 5,5 часов<br>
+      <p><span>Характеристики салона</span><br>
+      <span>Длина:</span> 12.95 м<br>
+      <span>Ширина:</span> 2.10 м<br>
+      <span>Высота:</span> 1.82 м<br>
+      <span>Объём багажника:</span> 6.80 м3
+      <img src="img/jets/jet1.png">
+    </div>
+    <div class="jet">
+      <img src="img/jets/jet111.png">
+    </div>
+  </div>
+  <br>
+  <h2> EMBRAER LINEAGE 1000E</h2>
+  <br>
+  <div class="info" id="info">
+    <div class="description">
+      <p><span>Максимальное количество мест:</span> 19<br>
+      <span>Характеристики ВС:</span><br>
+      <span>Крейсерская скорость:</span> 874км в час<br>
+      <span>Дальность полёта:</span> 8519км / до 8 часов<br>
+      <p><span>Характеристики салона</span><br>
+      <span>Длина:</span> 25.7 м<br>
+      <span>Ширина:</span> 2.67 м<br>
+      <span>Высота:</span> 2.01 м<br>
+      <span>Объём багажника:</span> 12,55 м3
+      <img src="img/jets/jet2.png">
+    </div>
+    <div class="jet">
+      <img src="img/jets/jet222.png">
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+//Tab
+function openCity(evt, cityName) {
+var i, tabcontent, tablinks;
+tabcontent = document.getElementsByClassName("tabcontent");
+for (i = 0; i < tabcontent.length; i++) {
+tabcontent[i].style.display = "none";
+}
+tablinks = document.getElementsByClassName("tablinks");
+for (i = 0; i < tablinks.length; i++) {
+tablinks[i].className = tablinks[i].className.replace(" active", "");
+}
+document.getElementById(cityName).style.display = "block";
+evt.currentTarget.className += " active";
+}
+</script>
