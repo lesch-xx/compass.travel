@@ -135,38 +135,7 @@
     </div>
   </main>
   <script>
-    // Contact form
-    const contactBtn = document.querySelector(".contact-btn");
-    const contactForm = document.querySelector(".contact-form");
-    const submitBtn = document.querySelector(".form-btn-send");
-    const closeBtn = document.querySelector(".form-btn-close");
-
-    contactBtn.addEventListener("click", () => {
-      contactBtn.classList.toggle("active");
-      contactForm.classList.toggle("active");
-    });
-
-    submitBtn.addEventListener("click", () => {
-      submitBtn.classList.toggle("active");
-      contactForm.classList.remove("active");
-    });
-
-    closeBtn.addEventListener("click", () => {
-      closeBtn.classList.toggle("active");
-      contactForm.classList.remove("active");
-    });
-
-    // Responsive navigation
-    const menuBtn = document.querySelector(".menu-btn");
-    const navigation = document.querySelector(".navigation");
-
-    menuBtn.addEventListener("click", () => {
-      menuBtn.classList.toggle("active");
-      navigation.classList.toggle("active");
-    });
-
-
-
+    //slideshow for travel
     class Slideshow {
       constructor (slides, prevButton, nextButton, index = 1) {
         const CLICK_EVENT = 'click';

@@ -111,36 +111,6 @@
  <div class="newsbutton"><a href="news.html">Все Новости</a></div>
 </main>
     <script type="text/javascript">
-       //Javascript of contact form
-      const contactBtn = document.querySelector(".contact-btn");
-      const contactForm = document.querySelector(".contact-form");
-      const submitBtn = document.querySelector(".form-btn-send");
-      const closeBtn = document.querySelector(".form-btn-close");
-
-      contactBtn.addEventListener("click", () => {
-        contactBtn.classList.toggle("active");
-        contactForm.classList.toggle("active");
-      });
-
-      submitBtn.addEventListener("click", () => {
-        submitBtn.classList.toggle("active");
-        contactForm.classList.remove("active");
-      });
-
-      closeBtn.addEventListener("click", () => {
-        closeBtn.classList.toggle("active");
-        contactForm.classList.remove("active");
-      });
-
-      //Javascript of responsive navigation
-      const menuBtn = document.querySelector(".menu-btn");
-      const navigation = document.querySelector(".navigation");
-
-      menuBtn.addEventListener("click", () => {
-        menuBtn.classList.toggle("active");
-        navigation.classList.toggle("active");
-      });
-
       //Javascript for video slider navigation
       const btns = document.querySelectorAll(".nav-btn");
       const slides = document.querySelectorAll(".video-slide");

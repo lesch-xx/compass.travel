@@ -17,3 +17,25 @@
     </div>
   </div>
 </div>
+<script>
+  //Javascript of contact form
+ const contactBtn = document.querySelector(".contact-btn");
+ const contactForm = document.querySelector(".contact-form");
+ const submitBtn = document.querySelector(".form-btn-send");
+ const closeBtn = document.querySelector(".form-btn-close");
+
+ contactBtn.addEventListener("click", () => {
+   contactBtn.classList.toggle("active");
+   contactForm.classList.toggle("active");
+ });
+
+ submitBtn.addEventListener("click", () => {
+   submitBtn.classList.toggle("active");
+   contactForm.classList.remove("active");
+ });
+
+ closeBtn.addEventListener("click", () => {
+   closeBtn.classList.toggle("active");
+   contactForm.classList.remove("active");
+ });
+ </script>
