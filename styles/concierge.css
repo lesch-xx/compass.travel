@@ -533,14 +533,14 @@ form .form-btn-send:hover {
     display: block;
     position: sticky;
     text-align: center;
-    padding: 15px;
+    padding-top: 15px;
     width: 100%;
     height: auto;
-    color: rgb(1, 1, 1, 0.8);
-    font-size: 17px;
+    color: #FFFFFE;
+    font-size: 18px;
     flex-wrap: wrap;
     z-index: 999;
-    border-top: 2px solid black;
+    background: rgb(1, 1, 1, 0.9);
   }
 
   .footer address {
@@ -549,10 +549,9 @@ form .form-btn-send:hover {
   }
 
   .footer address a {
-    color: rgb(1, 1, 1, 0.8);
+    color: #FFFFFE;
     cursor: pointer;
   }
-
 
 @media (min-width: 600px) {
   .allnews {
