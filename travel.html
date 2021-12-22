@@ -1,34 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Ваш лучший гид по путешествиям">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  <link rel="stylesheet" href="styles/travel.css">
-  <title>Compass.Travel</title>
-</head>
-
-<body>
-  <header>
-    <a href="index.html" class="brand">Compass.Travel</a>
-    <div class="menu-btn">
-      <i class="fa fa-bars" aria-hidden="true"></i>
-    </div>
-    <div class="navigation">
-      <div class="navigation-items">
-        <a href="index.html"><i class="fa fa-home"></i></a>
-        <a href="travel.html">Путешествия</a>
-        <a href="yachts.html">Яхты</a>
-        <a href="jets.html">Бизнес Авиация</a>
-        <a href="concierge.html">Консьерж</a>
-      </div>
-    </div>
-  </header>
-
-  <main>
-    <section class="home">
-      <img class="video-slide" src="img/main/palm2.jpg"></img>
+---
+layout: default
+styles: travel.css
+---
+<section class="home">
+      <img class="video-slide" src="img/main/palm.jpg"></img>
       <div class="content">
         <h1>Путешествия</h1>
         <p>Мы занимаемся всем, что касается индустрии отдыха и развлечений. Независимо от повода:
@@ -37,28 +12,7 @@
         или подарить незабываемый опыт близким — мы готовы быть вашим помощником в любой авантюре.
         </p>
       </div>
-
-      <div class="media-icons">
-        <a href="https://wa.me/79167430531" target="_blank"><i class="fa fa-whatsapp"></i></a>
-        <a href="https://www.instagram.com/compass.tc/" target="_blank"><i class="fa fa-instagram"></i></a>
-        <a href="https://www.facebook.com/compass.travel.concierge" target="_blank"><i class="fa fa-facebook-official"></i></a>
-        <a href="tel:+74950181680"><i class="fa fa-phone-square" target="_blank"></i></a>
-        <a href="#" class="contact-btn"><i class="fa fa-envelope-square"></i></a>
-      </div>
-
-      <div class="contact-form">
-        <div class="form-items">
-          <input type="text" id="fname" name="firstname" placeholder="Ваше имя.." required>
-          <input type="text" id="tel" name="tel" placeholder="Ваш контактный телефон.." required>
-          <input type="text" id="email" name="email" placeholder="Адрес электронной почты.." required>
-          <textarea id="subject" name="subject" placeholder="Расскажите о желаемой поездке в двух словах.." style="height:200px"></textarea>
-          <div class="form-btns">
-            <input class="form-btn-send" type="submit" value="Отправить">
-            <input class="form-btn-close" type="submit" value="Закрыть">
-          </div>
-        </div>
-      </div>
-
+      {% include media-menu.html %}
       <div class="scrolldown">
         <a href="#info"><span></span><span></span></a>
       </div>
@@ -158,7 +112,7 @@
       </div>
     </div>
 
-    <div class="contactus">
+    <!-- <div class="contactus">
       <p>Чтобы узнать подробности, пожалуйста, свяжитесь с нами удобным для Вас способом</p>
       <div class="media-bottom">
       <a href="https://wa.me/79167430531" target="_blank"><i class="fa fa-whatsapp"></i></a>
@@ -166,109 +120,67 @@
       <a href="https://www.facebook.com/compass.travel.concierge" target="_blank"><i class="fa fa-facebook-official"></i></a>
       <a href="tel:+74950181680"><i class="fa fa-phone-square" target="_blank"></i></a>
       <a href="#" class="contact-btn"><i class="fa fa-envelope-square"></i></a>
-    </div>
-  </main>
+    </div> -->
 
-  <div class="footer">
-    <address>
-      141551, Zhilinskaya str. 27-1, Zelenograd, Moscow
-      p: <a href="tel:+74950181680">+7 (495) 018-16-80</a>
-      e: <a href="mailto:info@compass.travel">info@compass.travel</a>
-    </address>
-  </div>
+<script>
+  //slideshow for travel
+  class Slideshow {
+    constructor (slides, prevButton, nextButton, index = 1) {
+      const CLICK_EVENT = 'click';
 
-  <script>
-    // Contact form
-    const contactBtn = document.querySelector(".contact-btn");
-    const contactForm = document.querySelector(".contact-form");
-    const submitBtn = document.querySelector(".form-btn-send");
-    const closeBtn = document.querySelector(".form-btn-close");
+      this.slides = slides;
+      this.size = slides.length;
+      this.index = index;
 
-    contactBtn.addEventListener("click", () => {
-      contactBtn.classList.toggle("active");
-      contactForm.classList.toggle("active");
-    });
+      this.display(index);
 
-    submitBtn.addEventListener("click", () => {
-      submitBtn.classList.toggle("active");
-      contactForm.classList.remove("active");
-    });
-
-    closeBtn.addEventListener("click", () => {
-      closeBtn.classList.toggle("active");
-      contactForm.classList.remove("active");
-    });
-
-    // Responsive navigation
-    const menuBtn = document.querySelector(".menu-btn");
-    const navigation = document.querySelector(".navigation");
-
-    menuBtn.addEventListener("click", () => {
-      menuBtn.classList.toggle("active");
-      navigation.classList.toggle("active");
-    });
-
-
-
-    class Slideshow {
-      constructor (slides, prevButton, nextButton, index = 1) {
-        const CLICK_EVENT = 'click';
-
-        this.slides = slides;
-        this.size = slides.length;
-        this.index = index;
-
-        this.display(index);
-
-        prevButton.addEventListener(CLICK_EVENT, () => {
-          this.prev();
-        });
-        nextButton.addEventListener(CLICK_EVENT, () => {
-          this.next();
-        });
-      }
-
-      showIndex (n) {
-        if (n > this.size) {
-          this.index = 1;
-        }
-
-        if (n < 1) {
-          this.index = this.size;
-        }
-
-        for (let i = 0; i < this.size; i++) {
-            this.slides[i].style.display = 'none';
-        }
-
-        this.slides[this.index - 1].style.display = 'block';
-      }
-
-      prev () {
-        this.display(this.index - 1);
-      }
-
-      next () {
-        this.display(this.index + 1);
-      }
-
-      display (index) {
-        this.index = index;
-        this.showIndex(index);
-      }
+      prevButton.addEventListener(CLICK_EVENT, () => {
+        this.prev();
+      });
+      nextButton.addEventListener(CLICK_EVENT, () => {
+        this.next();
+      });
     }
 
-    const slideshow1 = new Slideshow(
-      document.getElementsByClassName('slide1'),
-      document.getElementById('prevBtn1'),
-      document.getElementById('nextBtn1'),
-    );
+    showIndex (n) {
+      if (n > this.size) {
+        this.index = 1;
+      }
 
-    const slideshow2 = new Slideshow(
-      document.getElementsByClassName('slide2'),
-      document.getElementById('prevBtn2'),
-      document.getElementById('nextBtn2'),
-    );
-  </script>
-</body>
-</html>
+      if (n < 1) {
+        this.index = this.size;
+      }
+
+      for (let i = 0; i < this.size; i++) {
+          this.slides[i].style.display = 'none';
+      }
+
+      this.slides[this.index - 1].style.display = 'block';
+    }
+
+    prev () {
+      this.display(this.index - 1);
+    }
+
+    next () {
+      this.display(this.index + 1);
+    }
+
+    display (index) {
+      this.index = index;
+      this.showIndex(index);
+    }
+  }
+
+  const slideshow1 = new Slideshow(
+    document.getElementsByClassName('slide1'),
+    document.getElementById('prevBtn1'),
+    document.getElementById('nextBtn1'),
+  );
+
+  const slideshow2 = new Slideshow(
+    document.getElementsByClassName('slide2'),
+    document.getElementById('prevBtn2'),
+    document.getElementById('nextBtn2'),
+  );
+</script>
