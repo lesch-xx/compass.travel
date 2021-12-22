@@ -94,7 +94,7 @@ section {
 }
 
 .home:before {
-  z-index: 777;
+  z-index: 400;
   content: "";
   position: absolute;
   background: rgba(3, 96, 251, 0.2);
@@ -105,7 +105,7 @@ section {
 }
 
 .home .content {
-  z-index: 888;
+  z-index: 400;
   color: #FFFEFE;
   width: 80%;
   margin-top: 50px;
@@ -248,7 +248,7 @@ input[type=submit]:hover {
   height: 40px;
   transform: translateY(-80px) translateX(-50%)
              rotate(45deg);
-  z-index: 999;
+  z-index: 500;
 }
 
 .scrolldown span {
@@ -261,7 +261,7 @@ input[type=submit]:hover {
   border-bottom: 3px solid #FFFEFE;
   border-right: 3px solid #FFFEFE;
   animation: animate 1.5s linear infinite;
-  z-index: 999;
+  z-index: 500;
 }
 
 .scrolldown span:nth-child(1) {
@@ -487,6 +487,7 @@ main h2 {
     align-items: center;
     text-align: center;
     background: rgba(1, 1, 1, 0.6);
+    z-index: 800;
   }
 
   header .navigation .navigation-items a {
@@ -528,13 +529,20 @@ main h2 {
     letter-spacing: 0;
   }
 
+  .scrolldown {
+     z-index: 500;
+  }
+  .scrolldown span {
+    z-index: 500;
+  }
+
   .menu-btn {
     display: block;
     color: #FFFFFE;
     font-size: 30px;
     cursor: pointer;
     transition: 0.3s ease;
-    z-index: 999;
+    z-index: 1000;
   }
 
   .contact-form.active {
@@ -548,7 +556,7 @@ main h2 {
     left: 0;
     background: rgba(1, 1, 1, 0.3);
     opacity: 1;
-    z-index: 1000;
+    z-index: 800;
   }
 
   .allnews {
@@ -583,11 +591,11 @@ main h2 {
     padding-top: 15px;
     width: 100%;
     height: auto;
-    color: rgb(1, 1, 1, 0.8);
-    font-size: 20px;
+    color: #FFFFFE;
+    font-size: 18px;
     flex-wrap: wrap;
     z-index: 999;
-    border-top: 2px solid black;
+    background: rgb(1, 1, 1, 0.9);
   }
 
   .footer address {
@@ -596,7 +604,7 @@ main h2 {
   }
 
   .footer address a {
-    color: rgb(1, 1, 1, 0.8);
+    color: #FFFFFE;
     cursor: pointer;
   }
 

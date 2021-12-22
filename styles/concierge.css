@@ -90,7 +90,7 @@ section {
 }
 
 .home:before {
-  z-index: 777;
+  z-index: 400;
   content: "";
   position: absolute;
   background: rgba(3, 96, 251, 0.2);
@@ -101,7 +101,7 @@ section {
 }
 
 .home .content {
-  z-index: 888;
+  z-index: 400;
   color: #FFFEFE;
   width: 80%;
   margin-top: 50px;
@@ -172,7 +172,6 @@ section {
 
 .contact-form.active {
   display: flex;
-  z-index: 1000;
   justify-content: center;
   align-items: center;
   position: fixed;
@@ -266,7 +265,7 @@ input[type=submit]:hover {
   height: 40px;
   transform: translateY(-80px) translateX(-50%)
              rotate(45deg);
-  z-index: 999;
+  z-index: 500;
 }
 
 .scrolldown span {
@@ -279,7 +278,7 @@ input[type=submit]:hover {
   border-bottom: 3px solid #FFFEFE;
   border-right: 3px solid #FFFEFE;
   animation: animate 1.5s linear infinite;
-  z-index: 999;
+  z-index: 500;
 }
 
 .scrolldown span:nth-child(1) {
@@ -305,13 +304,11 @@ input[type=submit]:hover {
 }
 
 h2 {
-  background-color: rgb(1, 1, 1);
-  opacity: 0.8;
-  color: #FFFEFE;
+  background-color: #FFFEFE;
+  color: rgba(1, 1, 1, 0.8);
   text-align: center;
   width: 100%;
-  padding: 15px;
-  margin: 0;
+  margin-top: 40px;
 }
 
 .contact-form-bottom {
@@ -321,8 +318,7 @@ h2 {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: 100vh;
-  background: rgba(1, 1, 1, 0.8);
+  background-color:  #FFFEFE;
   opacity: 1;
   padding: 50px;
 }
@@ -334,18 +330,38 @@ h2 {
 }
 
 .contact-form-bottom.form-items {
-  background: rgb(1, 1, 1);
-  opacity: 0.75;
-  width: 600px;
-  max-width: 600px;
-  margin: 20px;
-  padding: 40px;
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  background: rgba(1, 1, 1, 0.9);
+  width: 600px;
+  max-width: 600px;
+  margin: 30px;
+  padding: 40px;
   border-radius: 5px;
-  box-shadow: 0 5px 25px rgba(1 1 1 /20%);
+  box-shadow: 0 5px 25px rgba(1, 1, 1, 0.2);
+}
+
+form .form-btn-send {
+  display: flex;
+  width: 180px;
+  background: #FFFEFE;
+  padding: 15px 15px;
+  color: rgba(1, 1, 1, 0.9);
+  font-size: 20px;
+  font-weight: 400;
+  text-decoration: none;
+  border-radius: 2px;
+  border: 1px solid rgba(1, 1, 1, 0.9);
+  opacity:1;
+}
+
+form .form-btn-send:hover {
+  background-color: rgba(1, 1, 1, 0.9);
+  color: #FFFEFE;
+  border: 1px solid rgba(1, 1, 1, 0.9);
+  width: 180px;
 }
 
 .contactus p {
@@ -442,6 +458,7 @@ h2 {
     align-items: center;
     text-align: center;
     background: rgba(1, 1, 1, 0.6);
+    z-index: 800;
   }
 
   header .navigation .navigation-items a {
@@ -478,13 +495,20 @@ h2 {
     margin-bottom: 20px;
   }
 
+    .scrolldown {
+      z-index: 500;
+   }
+   .scrolldown span {
+     z-index: 500;
+   }
+
   .menu-btn {
     display: block;
     color: #FFFFFE;
     font-size: 30px;
     cursor: pointer;
     transition: 0.3s ease;
-    z-index: 999;
+    z-index: 1000;
   }
 
   .contact-form.active {
@@ -498,7 +522,7 @@ h2 {
     left: 0;
     background: rgba(1, 1, 1, 0.3);
     opacity: 1;
-    z-index: 1000;
+    z-index: 800;
   }
 
   .allnews {
@@ -509,14 +533,14 @@ h2 {
     display: block;
     position: sticky;
     text-align: center;
-    padding: 15px;
+    padding-top: 15px;
     width: 100%;
     height: auto;
-    color: rgb(1, 1, 1, 0.8);
-    font-size: 17px;
+    color: #FFFFFE;
+    font-size: 18px;
     flex-wrap: wrap;
     z-index: 999;
-    border-top: 2px solid black;
+    background: rgb(1, 1, 1, 0.9);
   }
 
   .footer address {
@@ -525,10 +549,9 @@ h2 {
   }
 
   .footer address a {
-    color: rgb(1, 1, 1, 0.8);
+    color: #FFFFFE;
     cursor: pointer;
   }
-
 
 @media (min-width: 600px) {
   .allnews {
