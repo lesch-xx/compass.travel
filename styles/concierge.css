@@ -364,6 +364,19 @@ form .form-btn-send:hover {
   width: 180px;
 }
 
+  input[placeholder],
+  textarea[placeholder] {
+    color: rgba(1, 1, 1, 0.8);
+  }
+
+  select {
+  color: rgba(1, 1, 1, 0.5);
+  }
+
+  option[value] {
+    color: rgba(1, 1, 1, 1);
+  }
+
 .contactus p {
   display: flex;
   flex-direction: row;
