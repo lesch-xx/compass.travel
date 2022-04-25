@@ -26,6 +26,8 @@
 4. Export token: `export PERCY_TOKEN=1234567890`
 5. Run regression testing: `npm run test`
 
-##### Config YAML for GitHub
-baseurl: "/compass.travel" # the subpath of your site, e.g. /blog
-url: "https://lesch-xx.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+##### YAML config for GitHub
+```
+baseurl: "/compass.travel"  
+url: "https://lesch-xx.github.io"  
+```
