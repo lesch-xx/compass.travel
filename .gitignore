@@ -1,7 +1,8 @@
 # Ignore directories
 /_site/
-/.sass-cache/
+/.bundle/
 /.jekyll-cache/
+/.sass-cache/
 /node_modules/
 /vendor/
 
