@@ -370,6 +370,21 @@ input[type=submit]:hover {
   color: rgb(1, 1, 1, 0.7);
 }
 
+.news .more-btn {
+  text-align: right;
+}
+
+.news input[type=submit] {
+  background: rgb(1, 1, 1);
+  opacity: 0.9;
+  padding: 7px 7px;
+  color: #FFFFFE;
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
 .newsbutton a {
   display: flex;
   width: 180px;
